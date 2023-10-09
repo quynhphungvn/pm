@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbs</title>
+  <!-- <link rel="stylesheet" href="../../libs/semantic-ui/semantic.min.css"> -->
+  
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap-utilities.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/brands.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/solid.min.css">
+  <link rel="stylesheet" href="../../libs/css-custom/styles.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+
+</head>
+
+<body>
+  <div id="main-wrapper" class="d-flex">
+    <nav class="nav-bar bg-light">
+      <header class="text-center p-4 border-bottom">
+        <a href="" class="fs-4">
+          <i class="home icon"></i>
+        </a>
+      </header>
+      <div class="ui secondary vertical menu w-100 mt-5">
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Plan
+          <div class="menu">
+            <a class="item">Requirement</a>
+            <a class="item">WBS</a>
+            <a class="item">Gantt</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          DB
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Flow
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Class
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Test
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          UI
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          SP
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main-content">
+      <button class="circular ui icon button position-absolute" style="top: 5rem; left: 2rem;" onclick="showOffCanvas('#canvas-diagram')">
+          <i class="pencil alternate icon"></i>
+      </button>
+      <div id="canvas-diagram" class="offcanvas" data-location="right" data-width="400px">
+        <div class="offcanvas__content">
+            <header>
+                <h3 class="offcanvas__title">Gantt Diagram</h3>
+                <button class="ui button" type="button" onclick="hideOffCanvas('#canvas-diagram')">
+                  <i class="close icon"></i>
+                </button>
+            </header>
+            <main>
+              <div class="ui form p-4" >              
+                <div class="field">
+                  <label>Diagram</label>
+                  <textarea rows="35"></textarea>
+                </div>
+                <div class="actions">
+                  <div class="d-flex justify-content-start">
+                    <button class="ui icon button"><i class="sync icon"></i></button>
+                  </div>
+                  <div class="d-flex justify-content-between mt-3">
+                    <button class="ui button">Update</button>
+                    <button class="ui button">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <footer>
+    
+            </footer>
+        </div>
+      </div>
+      <header class="d-flex align-items-center">
+        <h3 class="ms-5 text-primary">Gantt</h3>
+      </header>
+      <main class="d-flex perfect-center">
+        <div class="diagram-wrapper"> 
+          <img src="../../assets/imgs/bird.jpg">
+        </div> 
+      </main>
+       
+    </main>
+  </div>
+  <script src="../../libs/css-custom/scripts.js"></script>
+  <script src="../../libs/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script>
+    $(document).ready(()=> {
+      setUpOffCanvas();
+    });
+    $('.dropdown').dropdown({
+      label: {
+        duration: 0,
+      },
+      debug: true,
+      performance: true,
+    });
+    function showModalEdit() {
+      $('.ui.modal.edit')
+        .modal('show')
+        ;
+    }
+    function deleteWbs(id, name) {
+      if (confirm("Delete Wbs " + name + "?") == true) {
+        alert("Deleted");
+      }
+    }
+    function openSideBar() {
+      $('.ui.sidebar.diagram')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('toggle')
+      ;
+    }
+  </script>
+
+  <!-- <script src="../../libs/semantic-ui/semantic.min.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+form {
+    padding: 1em;
+}
+form > div {
+    margin-bottom: 0.5em;
+}
+form .control {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#aside {
+    flex-basis: 350px;
+    flex-shrink: 0;
+    position: relative;
+}
+.aside-block .header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside-block .main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.aside-block .list-item {
+    margin: 0.25em 0;
+}
+
+.item-project {
+    height: 40px;
+    width: 100%;
+}
+.item-project button {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: start;
+    padding-left: 1em;
+}
+.item-project button:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+.item-project button.active {
+    background-color: #ddd;
+}
+.aside-block .footer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 0.5em;
+    color: #888;
+}
+#main {
+    flex-basis: 1000px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .main-content {
+    width: 90%;
+    height: 90%;
+    background-color: #eee;
+    padding: 1em;
+}
+#main .main-content > header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main .main-content > header a {
+    text-decoration: none;
+    color: purple;
+}
+#main .main-content > main {
+    height: calc(100% - 50px);
+    margin-top: 2em;
+}
+#main .main-content > main > div {
+    margin-top: 2em;
+}
+#main .main-content > main button {
+    background-color: transparent;
+    border: none;
+}
+#main .main-content > main button:hover {
+    cursor: pointer;
+}
+#main .main-content > main p {
+    padding: 2em;
+    background-color: #ddd;
+    margin-top: 1em;
+    max-height: 300px;
+    overflow: auto;
+}

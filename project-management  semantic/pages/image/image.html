@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbs</title>
+  <!-- <link rel="stylesheet" href="../../libs/semantic-ui/semantic.min.css"> -->
+
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap-utilities.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/brands.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/solid.min.css">
+  <link rel="stylesheet" href="../../libs/css-custom/styles.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+
+</head>
+
+<body>
+  <div id="main-wrapper" class="d-flex">
+    <nav class="nav-bar bg-light">
+      <header class="text-center p-4 border-bottom">
+        <a href="" class="fs-4">
+          <i class="home icon"></i>
+        </a>
+      </header>
+      <div class="ui secondary vertical menu w-100 mt-5">
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Plan
+          <div class="menu">
+            <a class="item">Requirement</a>
+            <a class="item">WBS</a>
+            <a class="item">Gantt</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          DB
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Flow
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Class
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Test
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          UI
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          SP
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main-content">
+      <header class="d-flex align-items-center">
+        <h3 class="ms-5 text-primary">Images</h3>
+      </header>
+      <main class="d-flex perfect-center">
+        <div class="image-wrapper">
+            <div class="mb-5 d-flex perfect-center">
+              <form class="ui form">
+                <div class="field">
+                  <div class="ui input">
+                    <input type="file">
+                  </div>
+                </div>
+                <button class="ui button" type="submit">Upload</button>
+              </form>
+            </div>
+            <hr>
+            <div class="mt-2">
+              <table class="ui celled table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>url</th>
+                    <th>thumbnail</th>
+                    <th>actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">James</td>
+                    <td data-label="Age">24</td>
+                    <td data-label="Job">Engineer</td>
+                    <td data-label="Job">
+                      <div class="d-flex ju">
+                        <button class="ui icon button">
+                          <i class="copy icon"></i>
+                        </button>           
+                        <button class="ui icon button">
+                          <i class="trash icon"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Jill</td>
+                    <td data-label="Age">26</td>
+                    <td data-label="Job">Engineer</td>
+                    <td data-label="Job">
+                      <div class="d-flex ju">
+                        <button class="ui icon button">
+                          <i class="copy icon"></i>
+                        </button>           
+                        <button class="ui icon button">
+                          <i class="trash icon"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Elyse</td>
+                    <td data-label="Age">24</td>
+                    <td data-label="Job">Designer</td>
+                    <td data-label="Job">
+                      <div class="d-flex ju">
+                        <button class="ui icon button">
+                          <i class="copy icon"></i>
+                        </button>           
+                        <button class="ui icon button">
+                          <i class="trash icon"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </main>
+
+    </main>
+  </div>
+  <script src="../../libs/css-custom/scripts.js"></script>
+  <script src="../../libs/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      setUpOffCanvas();
+    });
+    $('.dropdown').dropdown({
+      label: {
+        duration: 0,
+      },
+      debug: true,
+      performance: true,
+    });
+    function showModalEdit() {
+      $('.ui.modal.edit')
+        .modal('show')
+        ;
+    }
+    function deleteWbs(id, name) {
+      if (confirm("Delete Wbs " + name + "?") == true) {
+        alert("Deleted");
+      }
+    }
+    function openSideBar() {
+      $('.ui.sidebar.diagram')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('toggle')
+        ;
+    }
+  </script>
+
+  <!-- <script src="../../libs/semantic-ui/semantic.min.js"></script> -->
+</body>
+
+</html>

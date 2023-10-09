@@ -1,0 +1,649 @@
+<!-- .btn -->
+<button type="button" class="btn">Click me</button>
+<style>
+    .btn {
+        padding: 0.25rem 0.75rem;
+        border: 1px solid #aaa;
+        background-color: #eee;
+    }
+
+    .btn:hover {
+        cursor: pointer;
+        background-color: #ddd;
+    }
+</style>
+
+<!-- .btn-icon -->
+<button type="button" class="btn-icon">
+    <i class="fa-solid fa-pen"></i>
+</button>
+<style>
+    .btn-icon {
+    color: #777;
+    font-size: 1em;
+    padding: 0.25em 0.5em;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-icon:hover {
+    cursor: pointer;
+    color: #212121;
+}
+</style>
+
+<!-- .btn-round -->
+<button type="button" class="btn-round">
+    <i class="fa-solid fa-pen"></i>
+</button>
+<style>
+    .btn-icon-round {
+    border-radius: 50%;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    color: #ccc;
+}
+
+.btn-icon-round:hover {
+    cursor: pointer;
+    background-color: #aaa;
+    color: #212121;
+}
+
+.btn-icon-round--gray {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    color: #ccc;
+}
+.btn-icon-round--gray {
+    cursor: pointer;
+    background-color: #aaa;
+    color: #212121;
+}
+</style>
+
+<!-- .dropdown -->
+<div class="dropdown">
+    <div class="dropdown__trigger">
+        <button type="button" class="btn-icon">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+    </div>
+    <div class="dropdown__content">
+        <!-- content -->
+        <ul>
+            <li class="btn">item 1</li>
+            <li class="btn">item 2</li>
+        </ul>
+    </div>
+</div>
+<style>
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+.dropdown__content {
+    position: absolute;
+    border: 1px solid #eee;
+    min-width: 20px;
+    min-height: 20px;
+    display: none;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+}
+</style>
+
+<!-- .modal-el -->
+<button type="button" class="btn" data-target="#modal-el-example" onclick="openModalEl(this)">Open Modal El</button>
+
+<dialog id="modal-el-example" class="modal-el">
+    <!-- require the parent: position: relative | absolute | fixed -->
+    <div class="modal-el__container">
+        <div class="modal-el__content">
+            <header>
+                <h5 class="modal-el__title">Title</h5>
+                <button type="button" class="btn-icon" data-target="#modal-el-example" onclick="closeModalEl(this)">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </header>
+            <main>
+
+            </main>
+            <footer>
+
+            </footer>
+        </div>
+    </div>
+</dialog>
+<style>
+    .modal-el {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .modal-el__container {
+        width: 100%;
+        height: 100%;
+        background-color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-el__content {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        min-width: 100px;
+        border-radius: 5px;
+    }
+
+    .modal-el__content>header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .modal-el__title {
+        font-weight: 700;
+    }
+</style>
+<script>
+    function closeModalEl(btn) {
+        let modalElId = btn.dataset.target;
+        document.querySelector(modalElId).close();
+    }
+    function openModalEl(btn) {
+        let modalElId = btn.dataset.target;
+        document.querySelector(modalElId).show();
+    }
+</script>
+
+<!-- .form-label .form-control -->
+<div>
+    <label class="form-label" for="form-control-id">Name</label>
+    <input id="form-control-id" type="text" class="form-control">
+</div>
+
+<style>
+    .form-label {
+        display: flex;
+        margin: 0.25rem 0;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.25rem 0.5rem;
+        outline: none;
+        border: 1px solid #ccc;
+        margin: 0.25rem 0;
+    }
+</style>
+
+<!-- .tab -->
+<div class="tab">
+    <header>
+        <button class="tablinks active" onclick="openTabContent(event,'#tab-content-1')">tab 1</button>
+        <button class="tablinks" onclick="openTabContent(event,'#tab-content-2')">tab 2</button>
+    </header>
+    <main>
+        <div id="tab-content-1" class="tab-content" style="display: block;">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim corrupti ducimus rerum consequuntur a fuga
+                temporibus. Unde, molestiae eos voluptatem incidunt at vero repudiandae sed optio, est amet distinctio
+                natus.</p>
+        </div>
+        <div id="tab-content-2" class="tab-content">
+            tab 2
+        </div>
+        <div id="tab-content-3" class="tab-content">
+
+        </div>
+    </main>
+</div>
+<style>
+    .tab {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tab>header {
+        display: flex;
+    }
+
+    .tablinks {
+        border: none;
+        padding: 0.25rem 0.75rem;
+        border-right: 1px solid #aaa;
+    }
+
+    .tablinks:hover {
+        cursor: pointer;
+        background-color: #ccc;
+    }
+
+    .tablinks.active {
+        background-color: #ccc;
+    }
+
+    .tab>main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tab-content {
+        width: 100%;
+        /* can adjust to active overflow*/
+        max-height: 100px;
+        display: none;
+        overflow: auto;
+    }
+</style>
+<script>
+    function openTabContent(evt, tabContentId) {
+        let tabEl = evt.currentTarget.parentElement.parentElement;
+        removeActiveLinks(tabEl);
+        hideTabContents(tabEl);
+        activeTab(evt, tabContentId);
+    }
+    function removeActiveLinks(tabEl) {
+        let linkEls = tabEl.querySelectorAll(".tablinks");
+        for (let i = 0; i < linkEls.length; i++)
+            linkEls[i].classList.remove("active");
+    }
+    function hideTabContents(tabEl) {
+        let tabContentEls = tabEl.querySelectorAll(".tab-content");
+        for (let i = 0; i < tabContentEls.length; i++)
+            tabContentEls[i].style.display = "none";
+    }
+    function activeTab(evt, tabContentId) {
+        evt.currentTarget.classList.add("active");
+        document.querySelector(tabContentId).style.display = "block";
+    }
+</script>
+
+<!-- .accordion -->
+<div class="accordion">
+    <div class="accordion__trigger">
+        <button type="button" class="accordion__btn" onclick="triggerAccordionPanel(event)">Section 1</button>
+        <div class="accordion__icon">
+            <span class="icon-open"><i class="fa-solid fa-minus"></i></span>
+            <span class="icon-close"><i class="fa-solid fa-plus"></i></span>
+        </div>
+    </div>
+    <div class="accordion__panel">
+        <div>
+            <span>abc</span>
+        </div>
+    </div>
+</div>
+<style>
+    .accordion {
+        position: relative;
+    }
+
+    .accordion__trigger {
+        width: 100%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .accordion__btn {
+        text-align: start;
+        padding: 0.5rem 0.75rem;
+        flex-grow: 1;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .accordion__btn:hover {
+        cursor: pointer;
+        background-color: #ddd;
+    }
+
+    .accordion__btn.active {
+        background-color: #ddd;
+    }
+
+    .accordion__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0.25rem;
+        top: 0;
+        height: 100%;
+    }
+
+    .accordion__icon .icon-open {
+        display: none;
+    }
+
+    .accordion__panel {
+        display: none;
+    }
+</style>
+<script>
+    function triggerAccordionPanel(evt) {
+        let accordionEl = evt.currentTarget.parentElement.parentElement;
+        let accordionPanel = accordionEl.querySelector(".accordion__panel");
+        console.log(accordionPanel.style.display);
+        if (accordionPanel.style.display == "none"
+            || !accordionPanel.style.display) {
+            accordionPanel.style.display = "block";
+            evt.currentTarget.classList.add("active");
+            accordionEl.querySelector(".icon-open").style.display = "block";
+            accordionEl.querySelector(".icon-close").style.display = "none";
+            console.log("test");
+        } else {
+            accordionPanel.style.display = "none";
+            evt.currentTarget.classList.remove("active");
+            accordionEl.querySelector(".icon-open").style.display = "none";
+            accordionEl.querySelector(".icon-close").style.display = "block";
+        }
+    }
+</script>
+
+<!-- .offcanvas -->
+<button class="btn" type="button" onclick="showOffCanvas('#canvas-id')">Trigger offcanvas</button>
+<div id="canvas-id" class="offcanvas" data-location="left" data-width="300px">
+    <div class="offcanvas__content">
+        <header>
+            <h3 class="offcanvas__title">Title</h3>
+            <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-id')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</div>
+<style>
+    .offcanvas {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background-color: #eee;
+    }
+
+    .offcanvas__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offcanvas__content>header,
+    .offcanvas__content>footer {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ddd;
+        padding: 0 1rem;
+    }
+
+    .offcanvas__content>main {
+        flex-grow: 1;
+    }
+
+    .offcanvas__title {
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+    }
+</style>
+<script>
+    //onload = "setUpPage()"
+    function setUpPage() {
+        setUpOffCanvas();
+    }
+    function setUpOffCanvas() {
+        let canvases = document.querySelectorAll(".offcanvas");
+        for (let i = 0; i < canvases.length; i++) {
+            let canvasEl = canvases[i];
+            let width = canvasEl.dataset.width;
+            let location = canvasEl.dataset.location;
+            canvasEl.style.width = width;
+            if (location == 'left') {
+                canvasEl.style.left = "-" + width;
+                canvasEl.style.transition = "left 0.4s";
+            } else if (location == "right" || location == false) {
+                canvasEl.style.right = "-" + width;
+                canvasEl.style.transition = "right 0.4s";
+            }
+        }
+    }
+    function showOffCanvas(offCanvasId) {
+        let canvasEl = document.querySelector(offCanvasId);
+        let location = canvasEl.dataset.location;
+        if (location == "left")
+            canvasEl.style.left = 0;
+        else if (location == "right")
+            canvasEl.style.right = 0;
+    }
+    function hideOffCanvas(offCanvasId) {
+        let canvasEl = document.querySelector(offCanvasId);
+        let width = canvasEl.dataset.width;
+        let location = canvasEl.dataset.location;
+        if (location == "left") {
+            canvasEl.style.left = "-" + width;
+        } else if (location == "right" || location == false) {
+            canvasEl.style.right = "-" + width;
+        }
+    }
+</script>
+
+<!-- .breadcrumb -->
+<nav class="breadcrumb">
+    <a href="#" class="active">Req</a>
+    <a href="#">Erd</a>
+    <a href="#">Screen</a>
+    <a href="#">Usecase</a>
+    <a href="#">Class Dia</a>
+    <a href="#">Class</a>
+    <a href="#">Testing</a>
+    <a href="#">Ui</a>
+    <a href="#">Support</a>
+</nav>
+<style>
+    .breadcrumb a {
+        text-decoration: none;
+        color: #888;
+    }
+
+    .breadcrumb a:hover {
+        color: blue;
+    }
+
+    .breadcrumb a::after {
+        content: "/";
+        padding: 0 0.25rem;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:last-child::after {
+        content: "";
+    }
+</style>
+
+<ul class="list-item">
+    <li>
+        <div class="item-content d-flex active">
+            <button type="button" class="flex-grow-1">Screen 1</button>
+            <div class="control">
+                <button type="button" class="btn-icon" data-target="#modal-el-editscreen" onclick="openModalEl(this)"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="btn-icon"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </li>   
+    <li>
+        <div class="item-content d-flex">
+            <button type="button" class="flex-grow-1">Screen 1</button>
+            <div class="control">
+                <button type="button" class="btn-icon" data-target="#modal-el-editscreen" onclick="openModalEl(this)"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="btn-icon"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </li>                         
+    <li>
+        <div class="item-content d-flex">
+            <button type="button" class="flex-grow-1">Screen 1</button>
+            <div class="control">
+                <button type="button" class="btn-icon" data-target="#modal-el-editscreen" onclick="openModalEl(this)"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="btn-icon"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </li>
+</ul> 
+<style>
+.list-item > li {
+    height: 40px;
+}
+.list-item .item-content {
+    width: 100%;
+    height: 100%;
+}
+.list-item .item-content.active {
+    background-color: #ddd;
+}
+.list-item .item-content > button {
+    background-color: transparent;
+    border: none;
+    text-align: start;
+    padding: 1em 1em;
+}
+.list-item .item-content > button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+.list-item .item-content .control {
+    display: none;
+}
+.list-item .item-content:hover .control {
+    display: flex;
+}
+.list-item .item-content:hover .control button {
+    padding: 0.25em 0.35em;
+}
+</style>
+
+
+
+<!-- list-item-link-edit -->
+<ul class="list-item-link-edit">
+    <li class="item">
+        <a href="xxx.net">Go to # Lorem,  </a>
+        <div class="dropdown">
+            <div class="dropdown__trigger">
+                <button type="button" class="btn-icon">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+            </div>
+            <div class="dropdown__content">
+                <!-- content -->
+                <div class="list-item-button">                        
+                    <button type="button" class="item"><i class="fa-solid fa-pen"></i></button>                           
+                    <button type="button" class="item"><i class="fa-solid fa-trash"></i></button>                               
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="item active">
+        <a href="xxx.net">Go to # Lorem,  </a>
+        <div class="dropdown">
+            <div class="dropdown__trigger">
+                <button type="button" class="btn-icon">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+            </div>
+            <div class="dropdown__content">
+                <!-- content -->
+                <div class="list-item-button">                        
+                    <button type="button" class="item"><i class="fa-solid fa-pen"></i></button>                           
+                    <button type="button" class="item"><i class="fa-solid fa-trash"></i></button>                               
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<style>
+.list-item-link-edit .item {
+        background-color: #fff;
+        border-bottom: 1px solid #aaa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 40px;
+        padding: 0 10px;
+    }
+    .list-item-link-edit .item:hover {
+        cursor: pointer;
+        background-color: #eee;
+    }
+    .list-item-link-edit .item.active {
+        background-color: #eee;
+    }
+    .list-item-link-edit .item:hover .dropdown {
+        display: block;
+    }
+    .list-item-link-edit .item a {
+        text-decoration: none;
+        color: #000;
+        flex-grow: 1;
+    }
+    .list-item-link-edit a:visited {
+        color: #000;
+    }
+    .list-item-link-edit .dropdown {
+        display: none;
+    }
+    .list-item-button > .item{
+        min-height: 30px;
+        min-width: 50px;
+        border: 1px solid #eee;
+        background-color: white;
+        display: inline-block;
+        width: 100%;
+    }
+    .list-item-button > .item:hover {
+        cursor: pointer;
+        background-color: #ddd;
+    }
+</style>

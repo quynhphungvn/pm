@@ -1,0 +1,357 @@
+<!-- title  -->
+<span class="title">Title</span>
+<style>
+.title {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0.25em 0.75em;
+    border-radius: 0.25em;
+    background-color: #ccc;
+}
+</style>
+<!-- title-edit -->
+<div class="title-edit">
+    <span class="title-edit__text">Title</span>
+    <div class="title-edit__icon">
+      <div>
+        <button type="button" onclick="enableRawEdit()">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+      </div>    
+    </div>
+  </div>
+<style>
+.title-edit {
+      display: inline-block;
+      position: relative;
+      background-color: #ccc;
+      padding: 0.25em 1.25em;
+      border-radius: 0.25em;
+    }
+
+    .title-edit:hover .title-edit__icon {
+      display: block;
+    }
+
+    .title-edit .title-edit__text {
+      font-size: 1.3em;
+      font-weight: bold;
+      border-radius: 0.25em;
+      /* background-color: #ccc; */
+    }
+
+    .title-edit .title-edit__icon {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none;
+    }
+    .title-edit .title-edit__icon > div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .title-edit .title-edit__icon > div button {
+      background-color: transparent;
+      border: none;
+      padding: 0.25rem;
+    }
+    .title-edit .title-edit__icon > div button:hover {
+      cursor: pointer;
+      color: green;
+    }
+    .title-edit .title-edit__icon i {
+      font-size: 1em;
+    }
+</style>
+
+<!-- .title-more  -->
+<div class="title-more">
+    <span class="title-more__text">Title</span>
+    <div class="title-more__icon">
+      <div class="title-more__icon__container">
+        <div class="dropdown">
+          <div class="dropdown__trigger">
+            <button type="button" class="btn-icon">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+          <div class="dropdown__content">
+            <!-- content -->
+            <ul class="list-item">
+              <li>
+                <button class="item-crud">
+                  <span>Edit</span>
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </li>
+              <li>
+                <button class="item-crud">
+                  <span>Delete</span>
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<style>
+.title-more {
+      display: inline-block;
+      position: relative;
+      background-color: #ccc;
+      padding: 0.25em 1em;
+      border-radius: 0.25em;
+    }
+
+    .title-more:hover .title-more__icon {
+      display: inline-block;
+    }
+
+    .title-more .title-more__text {
+      font-size: 1.3em;
+      font-weight: bold;
+      border-radius: 0.25em;
+      background-color: #ccc;
+    }
+
+    .title-more .title-more__icon {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none;
+    }
+
+    .title-more .title-more__icon__container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-more .title-more__icon i {
+      font-size: 0.75em;
+    }
+    .item-crud {
+      width: 80px;
+      display: flex;
+      padding: 0.5em 0.75em;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #aaa;
+    }
+    .item-crud:hover {
+      cursor: pointer;
+      background-color: #ccc;
+    }
+</style>
+<!-- .header-title -->
+<h4 class="header-title fs--2">
+    Im header
+</h4>
+<style>
+    .header-title {
+        display: inline-block;
+        font-weight: 700;
+        padding: 0.25em 0.75em;
+        border-radius: 0.25em;
+        background-color: #888;
+    }
+</style>
+
+<!-- .header-title--control -->
+<div class="header-title-control fs--3">
+    <label>Im header</label>
+    <div>
+        <button type="button" class="btn-round">
+            <i class="fa-solid fa-pen"></i>
+        </button>
+    </div>
+</div>
+<style>
+    .header-title-control {
+        display: inline-block;
+        align-items: center;
+        border-radius: 0.25em;
+        background-color: #aaa;
+        padding: 0.5rem 1.25rem;
+        position: relative;
+    }
+
+    .header-title-control:hover>div {
+        display: flex;
+    }
+
+    .header-title-control>label {
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        flex-grow: 1;
+    }
+
+    .header-title-control>div {
+        position: absolute;
+        top: 0;
+        right: 0.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        display: none;
+    }
+</style>
+
+<!-- .aside-dialog -->
+<dialog id="dialog-id" class="aside-dialog">
+    <!-- require parent's position : absolute, relative -->
+    <div class="aside-dialog__content">
+        <header>
+            <h3 class="aside-dialog__title">Title</h3>
+            <button type="button" class="btn-close" onclick="closeAsideDialog('#dialog-id')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+        </footer>
+    </div>
+</dialog>
+
+<style>
+    .aside-dialog {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border: none;
+    }
+
+    .aside-dialog__content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-dialog__content>header {
+        height: 50px;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.5rem;
+    }
+
+    .aside-dialog__title {
+        font-weight: 700;
+        padding: 0.25rem 0.75rem;
+    }
+
+    .aside-dialog__content>main {
+        flex-basis: 100px;
+        flex-grow: 1;
+    }
+
+    .aside-dialog__content>footer {
+        flex-basis: 50px;
+        background-color: #eee;
+    }
+</style>
+<script>
+    function openAsideDialog(asideDialogId) {
+        document.querySelector(asideDialogId).show();
+    }
+    function closeAsideDialog(asideDialogId) {
+        document.querySelector(asideDialogId).close();
+    }
+</script>
+
+<!-- .aside-block -->
+<div class="aside-block">
+    <div class="aside-block__content">
+        <header>
+
+        </header>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</div>
+<style>
+    .aside-block {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+    }
+
+    .aside-block__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-block__content>header {
+        background-color: #ddd;
+        flex-basis: 50px;
+        flex-shrink: 0;
+    }
+
+    .aside-block__content>main {
+        flex-grow: 1;
+    }
+
+    .aside-block__content>footer {
+        background-color: #ddd;
+        flex-basis: 50px;
+        flex-shrink: 0;
+    }
+</style>
+
+<!-- .left-nav -->
+<nav class="left-nav">
+    <a href="#" class="active">Req</a>
+    <a href="#">Erd</a>
+    <a href="#">Screen</a>
+    <a href="#">Usecase</a>
+    <a href="#">Class Dia</a>
+    <a href="#">Class</a>
+    <a href="#">Testing</a>
+    <a href="#">Ui</a>
+    <a href="#">Support</a>
+</nav>
+<style>
+    .left-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-nav a {
+        text-decoration: none;
+        color: #212121;
+        border: 1px solid #aaa;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .left-nav a:hover {
+        background-color: #ccc;
+    }
+
+    .left-nav a.active {
+        background-color: #ccc;
+    }
+</style>

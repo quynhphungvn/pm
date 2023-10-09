@@ -1,0 +1,40 @@
+/* offcanvas */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.offcanvas__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.offcanvas__content>header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    padding: 0 1em;
+}
+
+.offcanvas__content>main {
+    flex-grow: 1;
+}
+
+.offcanvas__content>footer {
+    height: 50px;
+    background-color: #ddd;
+}
+
+.offcanvas__title {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}

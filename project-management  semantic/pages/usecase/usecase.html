@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbs</title>
+  <!-- <link rel="stylesheet" href="../../libs/semantic-ui/semantic.min.css"> -->
+
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap-utilities.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/brands.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/solid.min.css">
+  <link rel="stylesheet" href="../../libs/css-custom/styles.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+
+</head>
+
+<body>
+  <div id="main-wrapper" class="d-flex">
+    <nav class="nav-bar bg-light">
+      <header class="text-center p-4 border-bottom">
+        <a href="" class="fs-4">
+          <i class="home icon"></i>
+        </a>
+      </header>
+      <div class="ui secondary vertical menu w-100 mt-5">
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Plan
+          <div class="menu">
+            <a class="item">Requirement</a>
+            <a class="item">WBS</a>
+            <a class="item">Gantt</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          DB
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Flow
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Class
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          Test
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          UI
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          SP
+          <div class="menu">
+            <div class="header">Text Size</div>
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <aside class="left-bar border-end">
+      <header class="d-flex align-items-center">
+        <div class="ui breadcrumb mt-2">
+          <a class="section">Project 1</a>
+          <a class="section">Wbs</a>
+        </div>
+      </header>
+      <main>
+        <div class="ui vertical menu w-100">
+          <a href="https://www.google.com" class="item active">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+        </div>
+      </main>
+      <footer class="d-flex align-items-center">
+        <div class="ui left pointing dropdown icon button">
+          <i class="settings icon"></i>
+          <div class="menu">
+            <button class="item w-100" onclick="showModalAdd()">
+              <i class="plus icon"></i>
+              Add
+            </button>
+            <button class="item w-100" onclick="showModalEdit()">
+              <i class="edit icon"></i>
+              Edit
+            </button>
+            <button class="item w-100" onclick="deleteWbs(1,'Wbs 1')">
+              <i class="trash icon"></i>
+              Delete
+            </button>
+          </div>
+        </div>
+        <div class="ui mini modal add">
+          <div class="header">
+            Add Wbs
+          </div>
+          <div class="content">
+            <form class="ui form" name="add">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" name="Wbs-name" placeholder="Wbs Name">
+              </div>
+              <button class="ui button" type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+        <div class="ui modal edit">
+          <div class="header">
+            Edit Wbs
+          </div>
+          <div class="content">
+            <form class="ui form" name="edit">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" name="wbs-name" placeholder="Wbs Name" disabled>
+              </div>
+              <div class="field mb-5">
+                <label>New Name</label>
+                <input type="text" name="new-name" placeholder="New Name">
+              </div>
+              <button class="ui button" type="submit">Update</button>
+            </form>
+          </div>
+        </div>
+
+      </footer>
+    </aside>
+    <main class="main-content">
+      <header class="d-flex align-items-center">
+        <h3 class="ms-5 text-primary">Usecase 1</h3>
+      </header>
+      <main>
+        <div class="ui top attached tabular menu">
+          <a class="item active" data-tab="first">Specification</a>
+          <a class="item" data-tab="second">Activity</a>
+          <a class="item " data-tab="third">Sequence</a>
+        </div>
+        <div class="ui bottom attached tab segment active overflow-auto" data-tab="first">
+          <div class="spec-wrapper">
+            <button class="circular ui icon button position-absolute" style="top: 1rem; left: 1rem;"
+              onclick="showOffCanvas('#canvas-spec')">
+              <i class="pencil alternate icon"></i>
+            </button>
+            <div id="canvas-spec" class="offcanvas" data-location="left" data-width="440px">
+              <div class="offcanvas__content">
+                <header>
+                  <h3 class="offcanvas__title">Specification</h3>
+                  <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-spec')">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </header>
+                <main>
+                  <form class="ui form p-4">
+                    <div class="field">
+                      <label>Created by</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Date created</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Actors</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Trigger</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Description</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Precondition</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Postcondition</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Normal flow</label>
+                      <textarea rows="4"></textarea>
+                    </div>
+                    <div class="field">
+                      <label>Alternative flow</label>
+                      <textarea rows="4"></textarea>
+                    </div>
+                    <div class="field">
+                      <label>Exceptions</label>
+                      <textarea rows="4"></textarea>
+                    </div>
+                    <div class="field">
+                      <label>Priority</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Frequency of Use</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Bussiness Rule</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Other Infomation</label>
+                      <input type="text">
+                    </div>
+                    <div class="field">
+                      <label>Asummptions</label>
+                      <textarea rows="4"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <button class="ui button">Cancel</button>
+                      <button class="ui button">Update</button>
+                    </div>
+                  </form>
+                </main>
+                <footer>
+
+                </footer>
+              </div>
+            </div>
+            <div class="mt-5">
+              <table class="ui celled table">
+                <thead>
+                  <tr>
+                    <th>Id and Name</th>
+                    <th>UC-07: Log out</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">Created by</td>
+                    <td data-label="Age">QuynhPhung</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Date Created</td>
+                    <td data-label="Age">10/10/1992</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Actors</td>
+                    <td data-label="Age">User</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Trigger</td>
+                    <td data-label="Age">When User click the btn</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Description</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Precondition</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Postcondition</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Normal Flow</td>
+                    <td data-label="Age">
+                      <div class="ui form">
+                        <div class="ui field">
+                          <textarea rows="5" readonly></textarea>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Alternative flow</td>
+                    <td data-label="Age">
+                      <div class="ui form">
+                        <div class="ui field">
+                          <textarea rows="5" readonly></textarea>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Exception</td>
+                    <td data-label="Age">
+                      <div class="ui form">
+                        <div class="ui field">
+                          <textarea rows="2" readonly></textarea>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Priority</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Frequency of Use</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Bussiness Rule</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">Other Information</td>
+                    <td data-label="Age">...</td>
+                  </tr>
+                  <tr>
+                    <td>Assumptions</td>
+                    <td data-label="Age">
+                      <div class="ui form">
+                        <div class="ui field">
+                          <textarea rows="2" readonly></textarea>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- activity -->
+        <div class="ui bottom attached tab segment overflow-auto" data-tab="second">
+          <button class="circular ui icon button position-absolute" style="top: 2rem; left: 2rem;"
+            onclick="showOffCanvas('#canvas-activity')">
+            <i class="pencil alternate icon"></i>
+          </button>
+          <div id="canvas-activity" class="offcanvas" data-location="left" data-width="440px">
+            <div class="offcanvas__content">
+              <header>
+                <h3 class="offcanvas__title">Activity</h3>
+                <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-activity')">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </header>
+              <main>
+                <form class="ui form p-4">
+                  <div class="field">
+                    <label>Diagram</label>
+                    <textarea rows="35"></textarea>
+                  </div>
+                  <div class="actions">
+                    <div class="d-flex justify-content-end">
+                      <button class="ui icon button"><i class="sync icon"></i></button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                      <button class="ui button">Reset</button>
+                      <button class="ui button">Update</button>
+                    </div>
+                  </div>
+                </form>
+              </main>
+              <footer>
+
+              </footer>
+            </div>
+          </div>
+          <div class="diagram-wrapper">
+            <img src="../../assets/imgs/bird.jpg">
+          </div>
+        </div>
+        <!-- sequence  -->
+        <div class="ui bottom attached tab segment overflow-auto" data-tab="third">
+          <button class="circular ui icon button position-absolute" style="top: 2rem; left: 2rem;"
+            onclick="showOffCanvas('#canvas-sequence')">
+            <i class="pencil alternate icon"></i>
+          </button>
+          <div id="canvas-sequence" class="offcanvas" data-location="left" data-width="440px">
+            <div class="offcanvas__content">
+              <header>
+                <h3 class="offcanvas__title">Sequence</h3>
+                <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-sequence')">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </header>
+              <main>
+                <form class="ui form p-4">
+                  <div class="field">
+                    <label>Diagram</label>
+                    <textarea rows="35"></textarea>
+                  </div>
+                  <div class="actions">
+                    <div class="d-flex justify-content-end">
+                      <button class="ui icon button"><i class="sync icon"></i></button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                      <button class="ui button">Reset</button>
+                      <button class="ui button">Update</button>
+                    </div>
+                  </div>
+                </form>
+              </main>
+              <footer>
+
+              </footer>
+            </div>
+          </div>
+          <div class="diagram-wrapper">
+            <img src="../../assets/imgs/bird.jpg">
+          </div>
+        </div>
+      </main>
+
+    </main>
+  </div>
+  <script src="../../libs/css-custom/scripts.js"></script>
+  <script src="../../libs/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      setUpOffCanvas();
+    });
+    $('.menu .item')
+      .tab()
+      ;
+    $('.dropdown').dropdown({
+      label: {
+        duration: 0,
+      },
+      debug: true,
+      performance: true,
+    });
+    $('.ui.accordion').accordion();
+
+    function showModalAdd() {
+      $('.ui.modal.add')
+        .modal('show')
+        ;
+    }
+    function showModalEdit() {
+      $('.ui.modal.edit')
+        .modal('show')
+        ;
+    }
+    function deleteWbs(id, name) {
+      if (confirm("Delete Wbs " + name + "?") == true) {
+        alert("Deleted");
+      }
+    }
+    function openSideBar() {
+      $('.ui.sidebar.diagram')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('toggle')
+        ;
+    }
+  </script>
+
+  <!-- <script src="../../libs/semantic-ui/semantic.min.js"></script> -->
+</body>
+
+</html>

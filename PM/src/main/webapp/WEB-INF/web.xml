@@ -1,0 +1,48 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <servlet>
+  	<servlet-name>DomainController</servlet-name>
+  	<display-name>DomainController</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.DomainController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PlanController</servlet-name>
+  	<display-name>PlanController</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.PlanController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SqlQuery</servlet-name>
+  	<display-name>SqlQuery</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.SqlQueryController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DomainController</servlet-name>
+  	<url-pattern>/domain</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DomainController</servlet-name>
+  	<url-pattern>/domain/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PlanController</servlet-name>
+  	<url-pattern>/plan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PlanController</servlet-name>
+  	<url-pattern>/plan/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SqlQuery</servlet-name>
+  	<url-pattern>/sqlquery</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SqlQuery</servlet-name>
+  	<url-pattern>/sqlquery/*</url-pattern>
+  </servlet-mapping>
+</web-app>

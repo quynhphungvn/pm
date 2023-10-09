@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbs</title>
+  <link rel="stylesheet" href="../../libs/semantic-ui/semantic.min.css">
+
+  <link rel="stylesheet" href="../../libs/bootstrap/css/bootstrap-utilities.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/brands.min.css">
+  <link rel="stylesheet" href="../../libs/fontawesome-free-6.4.2-web/css/solid.min.css">
+  <link rel="stylesheet" href="../../libs/css-custom/styles.css">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"> -->
+
+</head>
+
+<body>
+  <div id="main-wrapper" class="d-flex">
+    <nav class="nav-bar bg-light">
+      <header class="text-center p-4 border-bottom">
+        <a href="" class="fs-4">
+          <i class="home icon"></i>
+        </a>
+      </header>
+      <div class="ui secondary vertical menu w-100 mt-5">
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          <span class="item-name">Plan</span>
+          <div class="menu">
+            <a class="item">Requirement</a>
+            <a class="item">WBS</a>
+            <a class="item">Gantt</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          <span class="item-name">Db</span>
+          <div class="menu">
+            <a class="item">ERD Diagram</a>
+            <a class="item">SQL queries</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          <span class="item-name">Flow</span>
+          <div class="menu">
+            <a class="item">Screen</a>
+            <a class="item">Usecase Spec</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          <span class="item-name">Class</span>
+          <div class="menu">
+            <a class="item">Class Diagram</a>
+            <a class="item">Packages</a>
+            <a class="item">Class Specification</a>
+            <a class="item">Unit Testing</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          <span class="item-name">Ui</span>
+          <div class="menu">
+            <div class="header">Undefined</div>
+            <a class="item">Undefined</a>
+          </div>
+        </div>
+        <div class="ui dropdown item">
+          <i class="dropdown icon"></i>
+          <span class="item-name">SP</span>
+          <div class="menu">
+            <a class="item">Image</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <aside class="left-bar border-end">
+      <header class="d-flex align-items-center border-bottom">
+        <div class="ui breadcrumb">
+          <a class="section">Home</a>
+          <a class="section">Store</a>
+          <div class="active section">T-Shirt</div>
+        </div>    
+      </header>
+      <main>
+        <div class="ui vertical menu w-100">
+          <a href="https://www.google.com" class="item active">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+          <a href="https://www.google.com" class="item">
+            Visit Google
+          </a>
+        </div>
+      </main>
+      <footer class="d-flex align-items-center">
+        <div class="ui left pointing dropdown icon button">
+          <i class="settings icon"></i>
+          <div class="menu">
+            <button class="item w-100" onclick="showModalAdd()">
+              <i class="plus icon"></i>
+              Add
+            </button>
+            <button class="item w-100" onclick="showModalEdit()">
+              <i class="edit icon"></i>
+              Edit
+            </button>
+            <button class="item w-100" onclick="deleteWbs(1,'Wbs 1')">
+              <i class="trash icon"></i>
+              Delete
+            </button>
+          </div>
+        </div>
+        <div class="ui mini modal add">
+          <div class="header">
+            Add Wbs
+          </div>
+          <div class="content">
+            <form class="ui form" name="add">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" name="Wbs-name" placeholder="Wbs Name">
+              </div>
+              <button class="ui button" type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+        <div class="ui modal edit">
+          <div class="header">
+            Edit Wbs
+          </div>
+          <div class="content">
+            <form class="ui form" name="edit">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" name="wbs-name" placeholder="Wbs Name" disabled>
+              </div>
+              <div class="field mb-5">
+                <label>New Name</label>
+                <input type="text" name="new-name" placeholder="New Name">
+              </div>
+              <button class="ui button" type="submit">Update</button>
+            </form>
+          </div>
+        </div>
+
+      </footer>
+    </aside>
+    <main class="main-content">
+      <!-- <button class="circular ui icon button position-absolute" style="top: 5rem; left: 2rem;" onclick="showOffCanvas('#canvas-diagram')">
+          <i class="pencil alternate icon"></i>
+      </button>
+      <div id="canvas-diagram" class="offcanvas" data-location="left" data-width="440px">
+        <div class="offcanvas__content">
+            <header>
+                <h3 class="offcanvas__title">Gantt Diagram</h3>
+                <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-diagram')">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </header>
+            <main>
+              <div class="ui form p-4" >              
+                <div class="field">
+                  <label>Diagram</label>
+                  <textarea rows="35"></textarea>
+                </div>
+                <div class="actions">
+                  <div class="d-flex justify-content-start">
+                    <button class="ui icon button"><i class="sync icon"></i></button>
+                  </div>
+                  <div class="d-flex justify-content-between mt-3">
+                    <button class="ui button">Update</button>
+                    <button class="ui button">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <footer>
+    
+            </footer>
+        </div>
+      </div> -->
+      <header class="d-flex align-items-center">
+        <h3 class="ms-5 text-primary">Screen</h3>
+      </header>
+      <main class="d-flex">
+        <div class="diagram-wrapper resize-both">
+          <button class="circular ui icon button position-absolute" style="top: 2rem; left: 2rem;"
+            onclick="showOffCanvas('#canvas-wireframe')">
+            <i class="pencil alternate icon"></i>
+          </button>
+          <div id="canvas-wireframe" class="offcanvas" data-location="left" data-width="440px">
+            <div class="offcanvas__content">
+              <header>
+                <h3 class="offcanvas__title">Wireframe</h3>
+                <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-wireframe')">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </header>
+              <main>
+                <form class="ui form p-4">
+                  <div class="field">
+                    <label>Diagram</label>
+                    <textarea rows="35"></textarea>
+                  </div>
+                  <div class="actions">
+                    <div class="d-flex justify-content-end">
+                      <button class="ui icon button"><i class="sync icon"></i></button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                      <button class="ui button">Reset</button>
+                      <button class="ui button">Update</button>
+                    </div>
+                  </div>
+                </form>
+              </main>
+              <footer>
+
+              </footer>
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img src="../../assets/imgs/bird.jpg">
+          </div>
+
+        </div>
+        <div class="diagram-wrapper resize-both">
+          <button class="circular ui icon button position-absolute" style="top: 2rem; left: 2rem;"
+            onclick="showOffCanvas('#canvas-usecase')">
+            <i class="pencil alternate icon"></i>
+          </button>
+          <div id="canvas-usecase" class="offcanvas" data-location="left" data-width="440px">
+            <div class="offcanvas__content">
+              <header>
+                <h3 class="offcanvas__title">Usecase</h3>
+                <button class="btn-icon" type="button" onclick="hideOffCanvas('#canvas-usecase')">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </header>
+              <main>
+                <form class="ui form p-4">
+                  <div class="field">
+                    <label>Diagram</label>
+                    <textarea rows="35"></textarea>
+                  </div>
+                  <div class="actions">
+                    <div class="d-flex justify-content-end">
+                      <button class="ui icon button"><i class="sync icon"></i></button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                      <button class="ui button">Reset</button>
+                      <button class="ui button">Update</button>
+                    </div>
+                  </div>
+                </form>
+              </main>
+              <footer>
+
+              </footer>
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img src="../../assets/imgs/bird.jpg">
+          </div>
+        </div>
+      </main>
+
+    </main>
+  </div>
+  <script src="../../libs/css-custom/scripts.js"></script>
+  <script src="../../libs/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      setUpOffCanvas();
+    });
+    $('.dropdown').dropdown({
+      label: {
+        duration: 0,
+      },
+      debug: true,
+      performance: true,
+    });
+    $('.ui.accordion').accordion();
+
+    function showModalAdd() {
+      $('.ui.modal.add')
+        .modal('show')
+        ;
+    }
+    function showModalEdit() {
+      $('.ui.modal.edit')
+        .modal('show')
+        ;
+    }
+    function deleteWbs(id, name) {
+      if (confirm("Delete Wbs " + name + "?") == true) {
+        alert("Deleted");
+      }
+    }
+    function openSideBar() {
+      $('.ui.sidebar.diagram')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('toggle')
+        ;
+    }
+  </script>
+
+  <!-- <script src="../../libs/semantic-ui/semantic.min.js"></script> -->
+</body>
+
+</html>
