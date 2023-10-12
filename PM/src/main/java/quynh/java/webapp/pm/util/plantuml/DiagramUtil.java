@@ -60,11 +60,18 @@ public class DiagramUtil {
 			case "USECASE":
 				return "@startuml  @enduml";
 			case "WBS":
-				return "";
+				return "@startwbs  @endwbs";
 			case "GANTT":
-				return "";		
+				return "@startgantt  @endgantt";		
 			default: 
-				return "";
+				return "@startuml  @enduml";
 		}
+	}
+	public static String createDiagramImage(String rootPath, int projectId, int domainId, 
+											String diagramContent, DiagramType type) {
+		String diaPath = DiagramPath.createPlanDiagramURI(projectId, domainId);
+		String imageDiagramName = type.toString() + "-diagram.png";
+		DiagramUtil.createImage(diagramContent, rootPath + diaPath, imageDiagramName);
+		return diaPath + imageDiagramName;
 	}
 }

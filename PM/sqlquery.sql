@@ -41,7 +41,7 @@ create table if not exists plan_diagram (
 create table if not exists screen (
 	id int not null auto_increment,
     name nvarchar(50) not null,
-    wireframe_diagram text not null,
+    wireframe_image mediumblob,
     usecase_diagram text not null,
     domain_id int not null,
     primary key (id),
@@ -51,18 +51,9 @@ create table if not exists screen (
 create table if not exists usecase (
 	id int not null auto_increment,
     name nvarchar(50) not null,
-    activity_diagram text not null,
-    sequence_diagram text not null,
-    screen_id int,
-    primary key (id),
-    foreign key (screen_id) references screen(id)
-);
-
-create table if not exists usecase_specification (
-	id int not null auto_increment,
     created_by nvarchar(50),
     created_date date,
-    actors nvarchar(50) not null,
+    actors nvarchar(50),
     trigger_context tinytext,
     description tinytext,
     preconditions tinytext,
@@ -73,13 +64,14 @@ create table if not exists usecase_specification (
     priority nvarchar(20),
     frequency_of_use nvarchar(20),
     bussiness_rules nvarchar(50),
-    other_information tinytext,
+    other_informations tinytext,
     assumptions tinytext,
-    usecase_id int,
+    activity_diagram text not null,
+    sequence_diagram text not null,
+	domain_id int,
     primary key (id),
-    foreign key (usecase_id) references usecase(id)
+    foreign key (domain_id) references domain(id)
 );
-
 create table if not exists class_package(
 	id int not null auto_increment,
     name nvarchar(255) not null unique,

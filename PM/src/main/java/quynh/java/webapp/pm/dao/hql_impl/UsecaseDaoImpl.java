@@ -9,31 +9,23 @@ import org.hibernate.query.Query;
 import quynh.java.webapp.pm.model.Usecase;
 import quynh.java.webapp.pm.util.db.HibernateConnection;
 import quynh.java.webapp.pm.dao.UsecaseDao;
+import quynh.java.webapp.pm.model.Domain;
 import quynh.java.webapp.pm.model.Screen;
 
 public class UsecaseDaoImpl implements UsecaseDao {
 private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
     
-    public List<Usecase> getAll(Screen screen) {
+    public List<Usecase> getAll(Domain domain) {
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
-        Query<Usecase> query = session.createQuery("FROM Usecase WHERE screen=:screen");
-        query.setParameter("screen", screen);
+        Query<Usecase> query = session.createQuery("FROM Usecase WHERE domain=:domain");
+        query.setParameter("domain", domain);
         List<Usecase> usecases = query.list();
         session.getTransaction().commit();
         session.close();
         return usecases;
     }
-    public Usecase get1(String name, Screen screen) {
-        Session session = sessionFactory.openSession();
-        Query<Usecase> query = session.createQuery("FROM Usecase WHERE name=:name and screen=:screen");
-        query.setParameter("name", name);
-        query.setParameter("screen", screen);
-        Usecase p = query.getSingleResultOrNull();
-        session.close();
-        return p;
-    }
-    public Usecase get1(int id) {
+    public Usecase getById(int id) {
         Session session = sessionFactory.openSession();
         Usecase p = session.get(Usecase.class, id);
         session.close();

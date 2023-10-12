@@ -33,7 +33,7 @@ private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
         session.close();
         return p;
     }
-    public Screen get1(int id) {
+    public Screen getById(int id) {
         Session session = sessionFactory.openSession();
         Screen p = session.get(Screen.class, id);
         session.close();

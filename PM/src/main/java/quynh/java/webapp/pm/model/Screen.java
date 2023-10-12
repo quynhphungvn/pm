@@ -22,8 +22,8 @@ public class Screen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @Column(name = "wireframe_diagram")
-    private String wireframeDiagram;
+    @Column(name = "wireframe_image")
+    private byte[] wireframeImage;
     @Column(name = "usecase_diagram")
     private String usecaseDiagram;
     @ManyToOne

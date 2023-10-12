@@ -99,10 +99,7 @@
     </nav>
     <aside class="left-bar border-end">
       <header class="d-flex align-items-center">
-        <div class="ui breadcrumb mt-2">
-          <a class="section">Project 1</a>
-          <a class="section">Wbs</a>
-        </div>
+        <strong class="ui header">Usecase</strong>
       </header>
       <main>
         <div class="ui vertical menu w-100">
@@ -217,7 +214,13 @@
     </aside>
     <main class="main-content">
       <header class="d-flex align-items-center">
-        <h3 class="ms-5 text-primary">Usecase 1</h3>
+        <div class="ui breadcrumb ms-3">
+          <a class="section">Home</a>
+          <i class="right angle icon divider"></i>
+          <a class="section">Store</a>
+          <i class="right angle icon divider"></i>
+          <div class="active section">T-Shirt</div>
+        </div>
       </header>
       <main>
         <div class="ui top attached tabular menu">
@@ -243,63 +246,59 @@
                   <form class="ui form p-4">
                     <div class="field">
                       <label>Created by</label>
-                      <input type="text">
-                    </div>
-                    <div class="field">
-                      <label>Date created</label>
-                      <input type="text">
+                      <input type="text" name="created-by">
                     </div>
                     <div class="field">
                       <label>Actors</label>
-                      <input type="text">
+                      <input type="text" name="actors">
                     </div>
                     <div class="field">
                       <label>Trigger</label>
-                      <input type="text">
+                      <input type="text" name="trigger">
                     </div>
                     <div class="field">
                       <label>Description</label>
-                      <input type="text">
+                      <input type="text" name="description">
                     </div>
                     <div class="field">
                       <label>Precondition</label>
-                      <input type="text">
+                      <input type="text" name="precondition">
                     </div>
                     <div class="field">
                       <label>Postcondition</label>
-                      <input type="text">
+                      <input type="text" name="postcondition">
                     </div>
                     <div class="field">
                       <label>Normal flow</label>
-                      <textarea rows="4"></textarea>
+                      <textarea rows="4" name="normal-flow"></textarea>
                     </div>
                     <div class="field">
                       <label>Alternative flow</label>
-                      <textarea rows="4"></textarea>
+                      <textarea rows="4" name="alternative-flow"></textarea>
                     </div>
                     <div class="field">
                       <label>Exceptions</label>
-                      <textarea rows="4"></textarea>
+                      <textarea rows="4" name="exceptions"></textarea>
                     </div>
                     <div class="field">
                       <label>Priority</label>
-                      <input type="text">
+                      <input type="text" name="priority">
                     </div>
                     <div class="field">
                       <label>Frequency of Use</label>
-                      <input type="text">
+                      <input type="text" name="frequency-of-use">
                     </div>
                     <div class="field">
                       <label>Bussiness Rule</label>
-                      <input type="text">
+                      <input type="text" name="bussiness-rule">
                     </div>
                     <div class="field">
-                      <label>Other Infomation</label>
-                      <input type="text">
+                      <label>Other Information</label>
+                      <input type="text" name="other-information">
                     </div>
                     <div class="field">
-                      <label>Asummptions</label>
-                      <textarea rows="4"></textarea>
+                      <label>Assumptions</label>
+                      <textarea rows="4" name="assumptions"></textarea>
                     </div>
                     <div class="d-flex justify-content-between">
                       <button class="ui button">Cancel</button>
@@ -495,7 +494,7 @@
     </main>
   </div>
   <script src="../../libs/css-custom/scripts.js"></script>
-  <script src="../../libs/jquery-3.1.1.min.js"></script>
+  <script src="../../libs/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
   <script>
     $(document).ready(() => {

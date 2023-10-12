@@ -7,7 +7,7 @@ import quynh.java.webapp.pm.model.Screen;
 
 public interface ScreenDao {
     List<Screen> getAll(Domain domain);
-    Screen get1(int id);
+    Screen getById(int id);
     Screen get1(String name, Domain domain);
     Screen add(Screen screen);
     Screen update(Screen screen);

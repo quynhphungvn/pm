@@ -19,7 +19,7 @@
           <span class="item-name">Flow</span>
           <div class="menu">
             <a href="/PM/screen?domain-id=${selectedDomain.id}" class="item">Screen</a>
-            <a class="item">Usecase Specification</a>
+            <a href="/PM/usecase?domain-id=${selectedDomain.id}" class="item">Usecase Specification</a>
           </div>
         </div>
         <div class="ui dropdown item">

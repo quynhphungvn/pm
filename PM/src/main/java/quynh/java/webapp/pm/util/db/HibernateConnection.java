@@ -19,7 +19,6 @@ import quynh.java.webapp.pm.model.Screen;
 import quynh.java.webapp.pm.model.SqlQuery;
 import quynh.java.webapp.pm.model.UnitTesting;
 import quynh.java.webapp.pm.model.Usecase;
-import quynh.java.webapp.pm.model.UsecaseSpecification;
 
 public class HibernateConnection {
 private final static SessionFactory FACTORY;
@@ -50,7 +49,6 @@ static {
     conf.addAnnotatedClass(SqlQuery.class);
     conf.addAnnotatedClass(UnitTesting.class);
     conf.addAnnotatedClass(Usecase.class);
-    conf.addAnnotatedClass(UsecaseSpecification.class);
     conf.addAnnotatedClass(DesignImage.class);
     ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(conf.getProperties()).build();
     FACTORY = conf.buildSessionFactory(registry);

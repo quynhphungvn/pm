@@ -21,6 +21,18 @@
   	<description></description>
   	<servlet-class>quynh.java.webapp.pm.controller.web.SqlQueryController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ScreenController</servlet-name>
+  	<display-name>ScreenController</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.ScreenController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UsecaseSpecificationController</servlet-name>
+  	<display-name>UsecaseSpecificationController</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.UsecaseSpecificationController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DomainController</servlet-name>
   	<url-pattern>/domain</url-pattern>
@@ -44,5 +56,21 @@
   <servlet-mapping>
   	<servlet-name>SqlQuery</servlet-name>
   	<url-pattern>/sqlquery/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ScreenController</servlet-name>
+  	<url-pattern>/screen</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ScreenController</servlet-name>
+  	<url-pattern>/screen/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UsecaseSpecificationController</servlet-name>
+  	<url-pattern>/usecase</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UsecaseSpecificationController</servlet-name>
+  	<url-pattern>/usecase/*</url-pattern>
   </servlet-mapping>
 </web-app>
