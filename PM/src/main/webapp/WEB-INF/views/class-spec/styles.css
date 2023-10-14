@@ -1,0 +1,51 @@
+.perfect-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* layout */
+#main-wrapper {
+    width: 100vw;
+    height: 100vh;
+}  
+nav.nav-bar {
+  width: 90px;
+  height: 100%;
+}
+aside.left-bar {
+    width: 350px;
+    height: 100%;
+    overflow: auto;
+}
+aside.left-bar > header {
+  height: 50px;
+}
+aside.left-bar > footer {
+    height: 50px;
+}
+aside.left-bar > main {
+    height: calc(100vh - 100px);
+    overflow: auto;
+}
+main.main-content {
+    width: calc(100vw - 440px);
+    height: 100vh;
+    position: relative;
+}
+main.main-content > header {
+  height: 50px;
+  box-shadow: 5px 5px 7px 0px #aaa;
+}
+main.main-content  > main {
+  height: calc(100vh - 50px);
+}
+.tab-content-wrapper {
+  height: 800px;
+  overflow: auto;
+}
+.info-table {
+  width: 50%;
+}
+.test-list {
+  width: 300px;
+}

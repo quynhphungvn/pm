@@ -2,6 +2,7 @@ package quynh.java.webapp.pm.dao.hql_impl;
 
 import java.util.List;
 
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -24,6 +25,20 @@ private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
         session.close();
         return classPackages;
     }
+    public List<ClassPackage> getAllAndJustOnePackageHasClasses(Domain domain, int packageId) {
+        Session session = sessionFactory.openSession();
+        session.getTransaction().begin();
+        Query<ClassPackage> query = session.createQuery("FROM ClassPackage WHERE domain=:domain");
+        query.setParameter("domain", domain);
+        List<ClassPackage> classPackages = query.list();
+        for (ClassPackage cp : classPackages) {
+        	if (cp.getId() == packageId)
+        		Hibernate.initialize(cp.getClasses());
+        }
+        session.getTransaction().commit();
+        session.close();
+        return classPackages;
+    }
     public ClassPackage get1(String name, Domain domain) {
         Session session = sessionFactory.openSession();
         Query<ClassPackage> query = session.createQuery("FROM ClassPackage WHERE name=:name and domain=:domain");
@@ -33,7 +48,7 @@ private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
         session.close();
         return p;
     }
-    public ClassPackage get1(int id) {
+    public ClassPackage getById(int id) {
         Session session = sessionFactory.openSession();
         ClassPackage p = session.get(ClassPackage.class, id);
         session.close();

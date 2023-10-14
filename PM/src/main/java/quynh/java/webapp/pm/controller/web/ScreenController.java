@@ -19,6 +19,7 @@ import quynh.java.webapp.pm.service.ScreenService;
 import quynh.java.webapp.pm.service.impl.DomainServiceImpl;
 import quynh.java.webapp.pm.service.impl.ScreenServiceImpl;
 import quynh.java.webapp.pm.util.RequestUtil;
+import quynh.java.webapp.pm.util.StringChecker;
 import quynh.java.webapp.pm.util.plantuml.DiagramPath;
 import quynh.java.webapp.pm.util.plantuml.DiagramType;
 import quynh.java.webapp.pm.util.plantuml.DiagramUtil;
@@ -179,7 +180,8 @@ public class ScreenController extends HttpServlet {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		screenService.updateWireframeImage(wireframeImage, Integer.parseInt(screenId));
+		if (screenId != null && StringChecker.isInteger(screenId))
+			screenService.updateWireframeImage(wireframeImage, Integer.parseInt(screenId));
 		try {
 			response.sendRedirect("/PM/screen?id=" + screenId);
 		} catch (IOException e) {

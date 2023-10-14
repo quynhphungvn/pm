@@ -1,7 +1,7 @@
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+ 
 <web-app>
   <servlet>
   	<servlet-name>DomainController</servlet-name>
@@ -33,6 +33,12 @@
   	<description></description>
   	<servlet-class>quynh.java.webapp.pm.controller.web.UsecaseSpecificationController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ClassSpecController</servlet-name>
+  	<display-name>ClassSpecController</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.ClassSpecController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DomainController</servlet-name>
   	<url-pattern>/domain</url-pattern>
@@ -44,7 +50,7 @@
   <servlet-mapping>
   	<servlet-name>PlanController</servlet-name>
   	<url-pattern>/plan</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> 
   <servlet-mapping>
   	<servlet-name>PlanController</servlet-name>
   	<url-pattern>/plan/*</url-pattern>
@@ -64,13 +70,21 @@
   <servlet-mapping>
   	<servlet-name>ScreenController</servlet-name>
   	<url-pattern>/screen/*</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> 
   <servlet-mapping>
   	<servlet-name>UsecaseSpecificationController</servlet-name>
   	<url-pattern>/usecase</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping>  
   <servlet-mapping>
   	<servlet-name>UsecaseSpecificationController</servlet-name>
   	<url-pattern>/usecase/*</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+  	<servlet-name>ClassSpecController</servlet-name>
+  	<url-pattern>/class-spec</url-pattern>
+  </servlet-mapping> 
+  <servlet-mapping>
+  	<servlet-name>ClassSpecController</servlet-name>
+  	<url-pattern>/class-spec/*</url-pattern>
   </servlet-mapping>
 </web-app>

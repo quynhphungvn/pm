@@ -16,8 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "unit_testing")
-public class UnitTesting {
+@Table(name = "testing_function")
+public class TestingFunction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -39,6 +39,6 @@ public class UnitTesting {
     @Column(name = "test_plan_result")
     private String testPlanResult;
     @ManyToOne
-    @JoinColumn(name = "class_specification_id")
-    private ClassSpecification classSpecification;
+    @JoinColumn(name = "class_spec_id")
+    private ClassSpec classSpec;
 }

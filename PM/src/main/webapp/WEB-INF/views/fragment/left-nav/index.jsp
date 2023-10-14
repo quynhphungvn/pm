@@ -10,33 +10,24 @@
           <i class="dropdown icon"></i>
           <span class="item-name">Db</span>
           <div class="menu">
-            <a href="/PM/domain/erd?domain-id=${selectedDomain.id}" class="item">ERD Diagram</a>
-            <a href="/PM/sqlquery?domain-id=${selectedDomain.id}" class="item">SQL queries</a>
+            <a href="/PM/domain/erd?domain-id=${selectedDomain.id}" target="_blank" class="item">ERD Diagram</a>
+            <a href="/PM/sqlquery?domain-id=${selectedDomain.id}" target="_blank" class="item">SQL queries</a>
           </div>
         </div>
         <div class="ui dropdown item">
           <i class="dropdown icon"></i>
           <span class="item-name">Flow</span>
           <div class="menu">
-            <a href="/PM/screen?domain-id=${selectedDomain.id}" class="item">Screen</a>
-            <a href="/PM/usecase?domain-id=${selectedDomain.id}" class="item">Usecase Specification</a>
+            <a href="/PM/screen?domain-id=${selectedDomain.id}" target="_blank" class="item">Screen</a>
+            <a href="/PM/usecase?domain-id=${selectedDomain.id}" target="_blank" class="item">Usecase Specification</a>
           </div>
         </div>
         <div class="ui dropdown item">
           <i class="dropdown icon"></i>
           <span class="item-name">Class</span>
           <div class="menu">
-            <a href="/PM/domain/class?domain-id=${selectedDomain.id}" class="item">Class Diagram</a>
-            <a class="item">Packages</a>
-            <a class="item">Class Specification</a>
-            <a class="item">Unit Testing</a>
-          </div>
-        </div>
-        <div class="ui dropdown item">
-          <i class="dropdown icon"></i>
-          <span class="item-name">SP</span>
-          <div class="menu">
-            <a class="item">Image</a>
+            <a href="/PM/domain/class?domain-id=${selectedDomain.id}" target="_blank" class="item">Class Diagram</a>
+            <a href="/PM/class-spec?domain-id=${selectedDomain.id}" target="_blank" class="item">Class Specification</a>
           </div>
         </div>
       </div>

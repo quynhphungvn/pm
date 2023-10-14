@@ -34,7 +34,7 @@ create table if not exists plan_diagram (
     name nvarchar(50),
     diagram text not null,
     type varchar(10),
-    domain_id int,
+    domain_id int not null,
     primary key (id),
     foreign key (domain_id) references domain(id)
 );
@@ -68,29 +68,30 @@ create table if not exists usecase (
     assumptions tinytext,
     activity_diagram text not null,
     sequence_diagram text not null,
-	domain_id int,
+	domain_id int not null,
     primary key (id),
     foreign key (domain_id) references domain(id)
 );
 create table if not exists class_package(
 	id int not null auto_increment,
     name nvarchar(255) not null unique,
-    domain_id int,
+    info text,
+    domain_id int not null,
     primary key (id),
     foreign key (domain_id) references domain(id)
 );
 
-create table if not exists class_specification (
+create table if not exists class_spec (
 	id int not null auto_increment,
     name nvarchar(255) not null,
     detail_content text,
-    class_package_id int,
+    class_package_id int not null,
     primary key (id),
     foreign key (class_package_id) references class_package(id),
     constraint UC_class_package unique(name, class_package_id)
 );
 
-create table if not exists unit_testing (
+create table if not exists testing_function (
 	id int not null auto_increment,
     name nvarchar(50) not null,
     function_name nvarchar(255),
@@ -101,32 +102,16 @@ create table if not exists unit_testing (
     function_logs tinytext,
     test_plan_input text,
     test_plan_result tinytext,
-    class_specification_id int,
+    class_spec_id int not null,
     primary key (id),
-    foreign key (class_specification_id) references class_specification(id)
+    foreign key (class_spec_id) references class_spec(id)
 );
 
 create table if not exists sql_query (
 	id int not null auto_increment,
     name nvarchar(50) not null,
     query_content text,
-    domain_id int,
+    domain_id int not null,
     primary key (id),
     foreign key (domain_id) references domain(id)
 );
-
-create table if not exists domain_image (
-	id int not null auto_increment,
-    name nvarchar(50) not null unique,
-    url varchar(255),
-    domain_id int,
-    primary key (id),
-    foreign key (domain_id) references domain (id)
-);
-
-insert into project (name) values ("Knowledge Management");
-insert into domain (name, project_id) values ("Main", 1), ("Mindmap", 1),("Concept", 1);
-insert into ui_style (name) values ("button blue");
-insert into ui_package (name) values ("common");
-insert into ui_group (name) values ("button");
-insert into ui_group_style (ui_group_id, ui_style_id) values (1, 1);

@@ -4,7 +4,6 @@ import java.util.List;
 
 import quynh.java.webapp.pm.dao.ProjectDao;
 import quynh.java.webapp.pm.dao.hql_impl.ProjectDaoImpl;
-import quynh.java.webapp.pm.exception.EntityExistedException;
 import quynh.java.webapp.pm.model.Project;
 import quynh.java.webapp.pm.service.ProjectService;
 

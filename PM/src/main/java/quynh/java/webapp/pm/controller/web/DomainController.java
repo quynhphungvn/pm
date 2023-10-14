@@ -98,7 +98,7 @@ public class DomainController extends HttpServlet {
 					request.setAttribute("selectedDomain", domain);
 					String publicDiagramURI = diaPath + imageDiagramName;
 					request.setAttribute("publicDiagramURI", publicDiagramURI);
-					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/class/index.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/class-diagram/index.jsp");
 					rd.forward(request, response);
 				}
 			}

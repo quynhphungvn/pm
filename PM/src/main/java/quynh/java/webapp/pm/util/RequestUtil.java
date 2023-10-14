@@ -16,13 +16,16 @@ public class RequestUtil {
 		return 0;
 	}
 	
-	public static String convertPartToString(Part part) throws IOException {
-		BufferedInputStream bis = new BufferedInputStream(part.getInputStream());
-		ByteArrayOutputStream buf = new ByteArrayOutputStream();
-		for (int result = bis.read(); result != -1; result = bis.read()) {
-		    buf.write((byte) result);
+	public static String convertPartToString(Part part) throws IOException { 
+		String s = null;
+		if (part != null) {
+			BufferedInputStream bis = new BufferedInputStream(part.getInputStream());
+			ByteArrayOutputStream buf = new ByteArrayOutputStream();
+			for (int result = bis.read(); result != -1; result = bis.read()) {
+			    buf.write((byte) result);
+			}
+			s = buf.toString("UTF-8");
 		}
-		// StandardCharsets.UTF_8.name() > JDK 7
-		return buf.toString("UTF-8");
+		return s;
 	}
 }

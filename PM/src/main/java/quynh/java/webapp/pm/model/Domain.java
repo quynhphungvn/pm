@@ -52,6 +52,4 @@ public class Domain {
     private List<ClassPackage> classPackages;
     @OneToMany(mappedBy = "domain")
     private List<SqlQuery> sqlQueries;
-    @OneToMany(mappedBy = "domain")
-    private List<DesignImage> images;
 }

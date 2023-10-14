@@ -2,7 +2,6 @@ package quynh.java.webapp.pm.service;
 
 import java.util.List;
 
-import quynh.java.webapp.pm.exception.EntityExistedException;
 import quynh.java.webapp.pm.model.Project;
 
 public interface ProjectService {

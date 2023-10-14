@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import quynh.java.webapp.pm.exception.EntityExistedException;
-import quynh.java.webapp.pm.model.Domain;
 import quynh.java.webapp.pm.model.Project;
 import quynh.java.webapp.pm.service.DomainService;
 import quynh.java.webapp.pm.service.ProjectService;

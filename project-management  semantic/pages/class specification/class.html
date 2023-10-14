@@ -98,381 +98,449 @@
       </div>
     </nav>
     <aside class="left-bar border-end">
-      <header class="d-flex align-items-center border-bottom">
-        <div class="ui breadcrumb">
-          <a class="section">Home</a>
-          <div class="divider"> / </div>
-          <a class="section">Store</a>
-          <div class="divider"> / </div>
-          <div class="active section">T-Shirt</div>
-        </div>    
+      <header class="d-flex align-items-center border-bottom px-2">
+        <h3 class="ui header">Class Specification</h3>       
       </header>
-      <main>
+      <main class="py-1 px-4">
         <div class="ui list mt-4">
           <div class="item">
             <i class="folder icon"></i>
             <div class="content">
-              <div class="header"><a href="#" class="text-break text-primary">quynh.java.webapp.management.controller.submmsdfds.api</a></div>
-              <div class="description">Lorem </div>
+              <div class="header">
+                <a href="#" class="text-break">
+                    quynh.java.webapp.management.controller.submmsdfds.api  
+                </a>
+              </div>
+              <div class="description d-flex justify-content-end border-bottom pb-1">
+                <button class="ui button bg-transparent p-0" 
+                        title="package info" 
+                        data-info="xyz"
+                        onclick="showModalPackageInfo(this)">
+                  <i class="info circle icon"></i>
+                </button>
+              </div>
               <div class="list">
                 <div class="item">
                   <i class="file icon"></i>
                   <div class="content">
-                    <div class="header"><a href="" class="text-success">theme.config</a></div>
-                    <div class="description">Config file for setting packaged themes</div>
+                    <div class="header"><a href="" class="text-secondary">theme.config</a></div>
                   </div>
                 </div>
+                <div class="item">
+                  <i class="file icon"></i>
+                  <div class="content">
+                    <div class="header"><a href="">theme.config</a></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="file icon"></i>
+                  <div class="content">
+                    <div class="header"><a href="" class="text-secondary">theme.config</a></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="file icon"></i>
+                  <div class="content">
+                    <div class="header"><a href="" class="text-secondary">theme.config</a></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="file icon"></i>
+                  <div class="content">
+                    <div class="header"><a href="" class="text-secondary">theme.config</a></div>
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="file icon"></i>
+                  <div class="content">
+                    <div class="header"><a href="" class="text-secondary">theme.config</a></div>
+                  </div>
+                </div>        
               </div>
             </div>
           </div>
-          <div class="description">----------------------------</div>
           <div class="item">
             <i class="folder icon"></i>
             <div class="content">
-              <div class="header">dist</div>
-              <div class="description">Compiled CSS and JS files</div>
-              <div class="list">
-                <div class="item">
-                  <i class="folder icon"></i>
-                  <div class="content">
-                    <div class="header">components</div>
-                    <div class="description">Individual component CSS and JS</div>
-                  </div>
-                </div>
-              </div>
+              <div class="header">
+                <a href="#" class="text-break text-secondary">
+                    quynh.java.webapp.management.controller.submmsdfds.api  
+                </a>
+              </div>          
             </div>
           </div>
-          <div class="description">----------------------------</div>
           <div class="item">
-            <i class="file icon"></i>
+            <i class="folder icon"></i>
             <div class="content">
-              <div class="header">semantic.json</div>
-              <div class="description">Contains build settings for gulp</div>
+              <div class="header">
+                <a href="#" class="text-break text-secondary">
+                    quynh.java.webapp.management.controller.submmsdfds.api  
+                </a>
+              </div>            
             </div>
+          </div>
+        </div>
+        <div class="ui modal package-info">
+          <i class="close icon"></i>
+          <div class="header">
+            Profile Picture
+          </div>
+          <div class="content">
+            <p class="info">
+
+            </p>
           </div>
         </div>
       </main>
-      <footer class="d-flex align-items-center">
+      <footer class="d-flex align-items-center px-2">
         <div class="ui left pointing dropdown icon button">
           <i class="settings icon"></i>
           <div class="menu">
-            <button class="item w-100" onclick="showModalAdd()">
+            <button class="item w-100" onclick="showModalAddClass()">
               <i class="plus icon"></i>
-              Add
+              Add Class
             </button>
-            <button class="item w-100" onclick="showModalEdit()">
+            <button class="item w-100" onclick="showModalEditClass()">
               <i class="edit icon"></i>
-              Edit
+              Edit Class
             </button>
-            <button class="item w-100" onclick="deleteWbs(1,'Wbs 1')">
+            <button class="item w-100" onclick="deleteClass(1,'Wbs 1')">
               <i class="trash icon"></i>
-              Delete
+              Delete Class
+            </button>
+            <div class="ui divider"></div>
+            <button class="item w-100" onclick="showModalAddPackage()">
+              <i class="plus icon"></i>
+              Add Package
+            </button>
+            <button class="item w-100" onclick="showModalEditPackage()">
+              <i class="edit icon"></i>
+              Edit Package
+            </button>
+            <button class="item w-100" onclick="deletePackage(1,'Wbs 1')">
+              <i class="trash icon"></i>
+              Delete Package
             </button>
           </div>
         </div>
-        <div class="ui mini modal add">
+        <div class="ui mini modal add-class">
           <div class="header">
-            Add package
+            Add Class
           </div>
           <div class="content">
-            <form class="ui form" name="add">
+            <form method="post" action="/PM/class/add-class"
+                  class="ui form" name="add-class">
+              <input type="hidden" name="package-id" value="1">
+              <input type="hidden" name="selected-class-id" value="1">
               <div class="field">
                 <label>Name</label>
-                <input type="text" name="Wbs-name" placeholder="Wbs Name">
+                <input type="text" name="name" placeholder="Class Name">
               </div>
               <button class="ui button" type="submit">Add</button>
             </form>
           </div>
         </div>
-        <div class="ui modal edit">
+        <div class="ui modal edit-class">
+          <div class="header">
+            Edit Class
+          </div>
+          <div class="content">
+            <form method="post" action="/PM/class/update-class-name"
+                class="ui form" name="edit-class">
+                <input type="hidden" name="class-id" value="1">
+              <div class="d-flex mb-3">
+                <label>Name:</label>
+                <strong class="ms-2">Class 1</strong>
+              </div>
+              <div class="field">
+                <label>New Name</label>
+                <input type="text" name="new-name" placeholder="New Name">
+              </div>
+              <button class="ui button" type="submit">Update</button>
+            </form>
+          </div>
+        </div>
+        <div class="ui modal add-package">
+          <div class="header">
+            Add package
+          </div>
+          <div class="content">
+            <form method="post" action="/PM/class/add-package"
+                class="ui form" name="add-package">
+              <input type="hidden" name="domain-id" value="1">
+              <input type="hidden" name="selected-package-id" value="1">
+              <input type="hidden" name="selected-class-id" value="1">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Package Name">
+              </div>
+              <div class="field">
+                <label>Info</label>
+                <textarea rows="10" name="info"></textarea>
+              </div>
+              <button class="ui button" type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+        <div class="ui modal edit-package">
           <div class="header">
             Edit Package
           </div>
           <div class="content">
-            <form class="ui form" name="edit">
-              <div class="field">
-                <label>Name</label>
-                <input type="text" name="wbs-name" placeholder="Package Name" disabled>
+            <form method="post" action="/PM/class/update-package-name"
+                  class="ui form" name="edit-package">
+              <input type="hidden" name="selected-class-id">
+              <input type="hidden" name="package-id" value="1">
+              <div class="d-flex mb-3">
+                <label>Name:</label>
+                <strong class="ms-2">Package 1</strong>
               </div>
               <div class="field">
                 <label>New Name</label>
                 <input type="text" name="new-name" placeholder="New Name">
               </div>
               <div class="field">
-                <label>Description</label>
-                <textarea rows="10"></textarea>
-              </div>
-              <div class="field">
-                <label>Short description</label>
-                <textarea rows="2"></textarea>
+                <label>Info</label>
+                <textarea rows="10" name="info"></textarea>
               </div>
               <button class="ui button" type="submit">Update</button>
             </form>
           </div>
         </div>
-
       </footer>
     </aside>
     <main class="main-content">
       <header class="d-flex align-items-center">
-        <h3 class="ms-5 text-success">TestController.java</h3>
+        <div class="ui breadcrumb ms-4">
+          <a class="section">Home</a>
+          <div class="divider"> / </div>
+          <a class="section">Store</a>
+          <div class="divider"> / </div>
+          <div class="active section">T-Shirt</div>
+        </div> 
       </header>
       <main class="p-4">
-        <div class="info-wrapper flow">
-          <section>
-            <h4 class="ui header fs-3">Description</h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id exercitationem animi sunt provident sit amet quibusdam quaerat alias natus sapiente nostrum porro quia reiciendis officiis quasi, harum nulla consectetur! Hic!</p>
-          </section>
-          <section>
-            <h4 class="ui header fs-3">Specification</h4>
-            <form class="ui form" name="class-specification">
-              <div class="field">
-                <textarea rows="32" readonly>
-                  import org.apache.http.message.BasicHttpEntityEnclosingRequest;
-import org.apache.http.message.BasicHttpRequest;
-import org.apache.http.message.HeaderGroup;
-import org.apache.http.util.EntityUtils;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import java.io.Closeable;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpCookie;
-import java.net.URI;
-import java.util.BitSet;
-import java.util.Enumeration;
-import java.util.Formatter;
-
-/**
- * An HTTP reverse proxy/gateway servlet. It is designed to be extended for customization
- * if desired. Most of the work is handled by
- * <a href="http://hc.apache.org/httpcomponents-client-ga/">Apache HttpClient</a>.
- * <p>
- *   There are alternatives to a servlet based proxy such as Apache mod_proxy if that is available to you. However
- *   this servlet is easily customizable by Java, secure-able by your web application's security (e.g. spring-security),
- *   portable across servlet engines, and is embeddable into another web application.
- * </p>
- * <p>
- *   Inspiration: http://httpd.apache.org/docs/2.0/mod/mod_proxy.html
- * </p>
- *
- * @author David Smiley dsmiley@apache.org
- */
-@SuppressWarnings({"deprecation", "serial", "WeakerAccess"})
-public class ProxyServlet extends HttpServlet {
-
-  /* INIT PARAMETER NAME CONSTANTS */
-
-  /** A boolean parameter name to enable logging of input and target URLs to the servlet log. */
-  public static final String P_LOG = "log";
-
-  /** A boolean parameter name to enable forwarding of the client IP  */
-  public static final String P_FORWARDEDFOR = "forwardip";
-
-  /** A boolean parameter name to keep HOST parameter as-is  */
-  public static final String P_PRESERVEHOST = "preserveHost";
-
-  /** A boolean parameter name to keep COOKIES as-is  */
-  public static final String P_PRESERVECOOKIES = "preserveCookies";
-
-  /** A boolean parameter name to keep COOKIE path as-is  */
-  public static final String P_PRESERVECOOKIEPATH = "preserveCookiePath";
-
-  /** A boolean parameter name to have auto-handle redirects */
-  public static final String P_HANDLEREDIRECTS = "http.protocol.handle-redirects"; // ClientPNames.HANDLE_REDIRECTS
-
-  /** An integer parameter name to set the socket connection timeout (millis) */
-  public static final String P_CONNECTTIMEOUT = "http.socket.timeout"; // CoreConnectionPNames.SO_TIMEOUT
-
-  /** An integer parameter name to set the socket read timeout (millis) */
-  public static final String P_READTIMEOUT = "http.read.timeout";
-
-  /** An integer parameter name to set the connection request timeout (millis) */
-  public static final String P_CONNECTIONREQUESTTIMEOUT = "http.connectionrequest.timeout";
-
-  /** An integer parameter name to set max connection number */
-  public static final String P_MAXCONNECTIONS = "http.maxConnections";
-
-  /** A boolean parameter whether to use JVM-defined system properties to configure various networking aspects. */
-  public static final String P_USESYSTEMPROPERTIES = "useSystemProperties";
-
-  /** A boolean parameter to enable handling of compression in the servlet. If it is false, compressed streams are passed through unmodified. */
-  public static final String P_HANDLECOMPRESSION = "handleCompression";
-
-  /** The parameter name for the target (destination) URI to proxy to. */
-  public static final String P_TARGET_URI = "targetUri";
-
-  protected static final String ATTR_TARGET_URI =
-          ProxyServlet.class.getSimpleName() + ".targetUri";
-  protected static final String ATTR_TARGET_HOST =
-          ProxyServlet.class.getSimpleName() + ".targetHost";
-
-  /* MISC */
-
-  protected boolean doLog = false;
-  protected boolean doForwardIP = true;
-  /** User agents shouldn't send the url fragment but what if it does? */
-  protected boolean doSendUrlFragment = true;
-  protected boolean doPreserveHost = false;
-  protected boolean doPreserveCookies = false;
-  protected boolean doPreserveCookiePath = false;
-  protected boolean doHandleRedirects = false;
-  protected boolean useSystemProperties = true;
-  protected boolean doHandleCompression = false;
-  protected int connectTimeout = -1;
-  protected int readTimeout = -1;
-  protected int connectionRequestTimeout = -1;
-  protected int maxConnections = -1;
-
-  //These next 3 are cached here, and should only be referred to in initialization logic. See the
-  // ATTR_* parameters.
-  /** From the configured parameter "targetUri". */
-  protected String targetUri;
-  protected URI targetUriObj;//new URI(targetUri)
-  protected HttpHost targetHost;//URIUtils.extractHost(targetUriObj);
-
-  private HttpClient proxyClient;
-
-  @Override
-  public String getServletInfo() {
-    return "A proxy servlet by David Smiley, dsmiley@apache.org";
-  }
-
-
-  protected String getTargetUri(HttpServletRequest servletRequest) {
-    return (String) servletRequest.getAttribute(ATTR_TARGET_URI);
-  }
-
-  protected HttpHost getTargetHost(HttpServletRequest servletRequest) {
-    return (HttpHost) servletRequest.getAttribute(ATTR_TARGET_HOST);
-  }
-
-  /**
-   * Reads a configuration parameter. By default it reads servlet init parameters but
-   * it can be overridden.
-   */
-  protected String getConfigParam(String key) {
-    return getServletConfig().getInitParameter(key);
-  }
-
-  @Override
-  public void init() throws ServletException {
-    String doLogStr = getConfigParam(P_LOG);
-    if (doLogStr != null) {
-      this.doLog = Boolean.parseBoolean(doLogStr);
-    }
-
-    String doForwardIPString = getConfigParam(P_FORWARDEDFOR);
-    if (doForwardIPString != null) {
-      this.doForwardIP = Boolean.parseBoolean(doForwardIPString);
-    }
-
-    String preserveHostString = getConfigParam(P_PRESERVEHOST);
-    if (preserveHostString != null) {
-      this.doPreserveHost = Boolean.parseBoolean(preserveHostString);
-    }
-
-    String preserveCookiesString = getConfigParam(P_PRESERVECOOKIES);
-    if (preserveCookiesString != null) {
-      this.doPreserveCookies = Boolean.parseBoolean(preserveCookiesString);
-    }
-
-    String preserveCookiePathString = getConfigParam(P_PRESERVECOOKIEPATH);
-    if (preserveCookiePathString != null) {
-      this.doPreserveCookiePath = Boolean.parseBoolean(preserveCookiePathString);
-    }
-
-    String handleRedirectsString = getConfigParam(P_HANDLEREDIRECTS);
-    if (handleRedirectsString != null) {
-      this.doHandleRedirects = Boolean.parseBoolean(handleRedirectsString);
-    }
-
-    String connectTimeoutString = getConfigParam(P_CONNECTTIMEOUT);
-    if (connectTimeoutString != null) {
-      this.connectTimeout = Integer.parseInt(connectTimeoutString);
-    }
-
-    String readTimeoutString = getConfigParam(P_READTIMEOUT);
-    if (readTimeoutString != null) {
-      this.readTimeout = Integer.parseInt(readTimeoutString);
-    }
-
-    String connectionRequestTimeout = getConfigParam(P_CONNECTIONREQUESTTIMEOUT);
-    if (connectionRequestTimeout != null) {
-      this.connectionRequestTimeout = Integer.parseInt(connectionRequestTimeout);
-    }
-
-    String maxConnections = getConfigParam(P_MAXCONNECTIONS);
-    if (maxConnections != null) {
-      this.maxConnections = Integer.parseInt(maxConnections);
-    }
-
-    String useSystemPropertiesString = getConfigParam(P_USESYSTEMPROPERTIES);
-    if (useSystemPropertiesString != null) {
-      this.useSystemProperties = Boolean.parseBoolean(useSystemPropertiesString);
-    }
-
-    String doHandleCompression = getConfigParam(P_HANDLECOMPRESSION);
-    if (doHandleCompression != null) {
-      this.doHandleCompression = Boolean.parseBoolean(doHandleCompression);
-    }
-
-    initTarget();//sets target*
-
-    proxyClient = createHttpClient();
-  }
-
-  /**
-   * Sub-classes can override specific behaviour of {@link org.apache.http.client.config.RequestConfig}.
-   */
-  protected RequestConfig buildRequestConfig() {
-    return RequestConfig.custom()
-            .setRedirectsEnabled(doHandleRedirects)
-            .setCookieSpec(CookieSpecs.IGNORE_COOKIES) // we handle them in the servlet instead
-            .setConnectTimeout(connectTimeout)
-            .setSocketTimeout(readTimeout)
-            .setConnectionRequestTimeout(connectionRequestTimeout)
-            .build();
-  }
-
-  /**
-   * Sub-classes can override specific behaviour of {@link org.apache.http.config.SocketConfig}.
-   */
-  protected SocketConfig buildSocketConfig() {
-
-    if (readTimeout < 1) {
-      return null;
-    }
-
-    return SocketConfig.custom()
-            .setSoTimeout(readTimeout)
-            .build();
-  }
-                </textarea>
-              </div>   
-              <div class="d-flex justify-content-end">
-                <button class="ui button d-none btn-update-spec">Update</button>
-                <button type="button" class="ui icon button" onclick="enableEditMode()"><i class="edit icon"></i></button>    
-              </div>         
-            </form>
-            
-          </section>
+        <div class="ui top attached tabular menu">
+          <a class="item active" data-tab="first">Class Spec</a>
+          <a class="item" data-tab="second">Unit Test</a>
         </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+          <div class="tab-content-wrapper">
+            <section>
+              <h4 class="ui header fs-3">theme.config</h4>
+              <form class="ui form" name="class-specification">
+                <div class="field">
+                  <textarea rows="38" readonly>
+                  </textarea>
+                </div>   
+                <div class="d-flex justify-content-end">
+                  <button class="ui button d-none btn-update-spec">Update</button>
+                  <button type="button" class="ui icon button" onclick="enableEditMode()"><i class="edit icon"></i></button>    
+                </div>         
+              </form>
+              
+            </section>
+          </div>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+          <div class="tab-content-wrapper d-flex">
+            <div class="test-list pe-2 border-end d-flex flex-column">
+              <header class="ui header">
+                <h4>Test List</h4>
+              </header>
+              <main class="flex-grow-1">
+                <div class="ui vertical menu w-100">
+                  <a href="https://www.google.com" class="item">
+                    Visit Google
+                  </a>
+                  <div class="link item">
+                    Javascript Link
+                  </div>
+              </div>
+              </main>
+              <footer>
+                <div class="ui left pointing dropdown icon button">
+                  <i class="settings icon"></i>
+                  <div class="menu">
+                    <button class="item w-100" onclick="showModalAddUnitTest()">
+                      <i class="plus icon"></i>
+                      Add
+                    </button>
+                    <button class="item w-100" onclick="showModalEditUnitTest()">
+                      <i class="edit icon"></i>
+                      Edit
+                    </button>
+                    <button class="item w-100" onclick="deleteUnitTest(1,'Wbs 1')">
+                      <i class="trash icon"></i>
+                      Delete
+                    </button>   
+                    <div class="ui modal add-unit-test">
+                      <div class="header">
+                        Add Unit Test
+                      </div>
+                      <div class="content">
+                        <form method="post" action="/PM/class/add-unit-test"
+                            class="ui form" name="add-unit-test">
+                          <input type="hidden" name="domain-id" value="1">
+                          <input type="hidden" name="selected-package-id" value="1">
+                          <input type="hidden" name="selected-class-id" value="1">
+                          <div class="field">
+                            <label>Function Name</label>
+                            <input type="text" name="name" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Test Requirement</label>
+                            <input type="text" name="requirement" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Params</label>
+                            <input type="text" name="params" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Return</label>
+                            <input type="text" name="return" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Exceptions</label>
+                            <textarea rows="3"></textarea>
+                          </div>
+                          <div class="field">
+                            <label>Logs</label>
+                            <textarea rows="3"></textarea>
+                          </div>
+                          <button class="ui button" type="submit">Add</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="ui modal edit-unit-test">
+                      <div class="header">
+                        Edit Unit Test
+                      </div>
+                      <div class="content">
+                        <form method="post" action="/PM/class/update-unit-test"
+                              class="ui form" name="edit-package">
+                          <input type="hidden" name="selected-class-id">
+                          <input type="hidden" name="package-id" value="1">
+                          <div class="d-flex mb-3">
+                            <label>Name:</label>
+                            <strong class="ms-2">Package 1</strong>
+                          </div>
+                          <div class="field">
+                            <label>New Name</label>
+                            <input type="text" name="new-name" placeholder="New Name">
+                          </div>
+                          <div class="field">
+                            <label>Test Requirement</label>
+                            <input type="text" name="requirement" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Params</label>
+                            <input type="text" name="params" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Return</label>
+                            <input type="text" name="return" placeholder="Package Name">
+                          </div>
+                          <div class="field">
+                            <label>Exceptions</label>
+                            <textarea rows="3"></textarea>
+                          </div>
+                          <div class="field">
+                            <label>Logs</label>
+                            <textarea rows="3"></textarea>
+                          </div>
+                          <button class="ui button" type="submit">Update</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+            <div class="info-table px-4">
+              <h4 class="ui header">Function Info</h4>
+              <table class="ui definition table">
+                <tbody>
+                  <tr>
+                    <td>Function name</td>
+                    <td>int add(int x, int y)</td>
+                  </tr>
+                  <tr>
+                    <td>Test Requirement</td>
+                    <td>add two int numbers</td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Input</td>
+                    <td>int x, int y</td>
+                  </tr>
+                  <tr>
+                    <td>Out put</td>
+                    <td>
+                      <table class="ui definition table">
+                        <tbody>
+                          <tr>
+                            <td>Return</td>
+                            <td>Int sum</td>                          
+                          </tr>
+                          <tr>
+                            <td>Exception</td>                       
+                            <td>Ex01</td>                         
+                          </tr>
+                          <tr>
+                            <td>Logs</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi esse id eaque minus animi, accusamus officia fugit asperiores. Beatae quisquam magnam obcaecati itaque corporis consectetur culpa natus reprehenderit sequi?</td>                  
+                          </tr>
+                      </tbody></table> 
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="testcase ms-2 flex-grow-1">
+              <div>
+                <form class="ui form" name="testcase-input">
+                  <div class="field">
+                    <label>Input</label>
+                    <textarea class="mt-2" rows="20" readonly></textarea>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button class="ui button btn-update-input d-none" type="submit">Update</button>
+                    <button class="ui icon button" type="button" onclick="enableEditInputMode()">
+                      <i class="icon edit"></i>
+                    </button>
+                  </div>     
+                </form>
+              </div>
+              <div class="mt-4">
+                <form class="ui form" name="testcase-result">
+                  <div class="field">
+                    <label>Result</label>
+                    <textarea rows="7" readonly></textarea>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button class="ui button btn-update-result d-none" type="submit">Update</button>
+                    <button class="ui icon button" type="button" onclick="enableEditResultMode()">
+                      <i class="icon edit"></i>
+                    </button>
+                  </div>     
+                </form>
+              </div>
+          </div>
+        </div> 
       </main>   
     </main>
   </div>
   <script src="../../libs/css-custom/scripts.js"></script>
-  <script src="../../libs/jquery-3.1.1.min.js"></script>
+  <script src="../../libs/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
   <script>
     $(document).ready(()=> {
       setUpOffCanvas();
     });
+    $('.tabular.menu .item').tab();
     $('.dropdown').dropdown({
       label: {
         duration: 0,
@@ -480,20 +548,58 @@ public class ProxyServlet extends HttpServlet {
       debug: true,
       performance: true,
     });
-    $('.ui.accordion').accordion();
+    function showModalPackageInfo(btnEl) {
+      let info = btnEl.dataset.info;
+      $('.ui.modal.package-info p.info').text(info);
+      $('.ui.modal.package-info')
+        .modal('show')
+        ;
+    }
+    function showModalAddClass() {
+      $('.ui.modal.add-class')
+        .modal('show')
+        ;
+    }
+    function showModalEditClass() {
+      $('.ui.modal.edit-class')
+        .modal('show')
+        ;
+    }
 
-    function showModalAdd() {
-      $('.ui.modal.add')
-        .modal('show')
-        ;
-    }
-    function showModalEdit() {
-      $('.ui.modal.edit')
-        .modal('show')
-        ;
-    }
-    function deleteWbs(id, name) {
+    function deleteClass(id, name) {
       if (confirm("Delete Wbs " + name + "?") == true) {
+        alert("Deleted");
+      }
+    }
+    function showModalAddPackage() {
+      $('.ui.modal.add-package')
+        .modal('show')
+        ;
+    }
+    function showModalEditPackage() {
+      $('.ui.modal.edit-package')
+        .modal('show')
+        ;
+    }
+
+    function deletePackage(id, name) {
+      if (confirm("Delete Wbs " + name + "?") == true) {
+        alert("Deleted");
+      }
+    }
+    function showModalAddUnitTest() {
+      $('.ui.modal.add-unit-test')
+        .modal('show')
+        ;
+    }
+    function showModalEditUnitTest() {
+      $('.ui.modal.edit-unit-test')
+        .modal('show')
+        ;
+    }
+
+    function deleteUnitTest(id, name) {
+      if (confirm("Delete UnitTest " + name + "?") == true) {
         alert("Deleted");
       }
     }
@@ -507,7 +613,14 @@ public class ProxyServlet extends HttpServlet {
       $("form[name='class-specification'] textarea").attr("readonly", false);
       $("form[name='class-specification'] button.btn-update-spec").removeClass("d-none");
     }
-    
+    function enableEditInputMode() {
+      $("form[name='testcase-input'] textarea").attr("readonly", false);
+      $("form[name='testcase-input'] button.btn-update-input").removeClass("d-none");
+    }
+    function enableEditResultMode() {
+      $("form[name='testcase-result'] textarea").attr("readonly", false);
+      $("form[name='testcase-result'] button.btn-update-result").removeClass("d-none");
+    }
   </script>
 
   <!-- <script src="../../libs/semantic-ui/semantic.min.js"></script> -->

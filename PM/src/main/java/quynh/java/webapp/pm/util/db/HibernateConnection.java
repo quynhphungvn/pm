@@ -10,14 +10,13 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import quynh.java.webapp.pm.model.ClassPackage;
-import quynh.java.webapp.pm.model.ClassSpecification;
-import quynh.java.webapp.pm.model.DesignImage;
+import quynh.java.webapp.pm.model.ClassSpec;
 import quynh.java.webapp.pm.model.Domain;
 import quynh.java.webapp.pm.model.PlanDiagram;
 import quynh.java.webapp.pm.model.Project;
 import quynh.java.webapp.pm.model.Screen;
 import quynh.java.webapp.pm.model.SqlQuery;
-import quynh.java.webapp.pm.model.UnitTesting;
+import quynh.java.webapp.pm.model.TestingFunction;
 import quynh.java.webapp.pm.model.Usecase;
 
 public class HibernateConnection {
@@ -45,11 +44,10 @@ static {
     conf.addAnnotatedClass(PlanDiagram.class);
     conf.addAnnotatedClass(Screen.class);
     conf.addAnnotatedClass(ClassPackage.class);
-    conf.addAnnotatedClass(ClassSpecification.class);
+    conf.addAnnotatedClass(ClassSpec.class);
     conf.addAnnotatedClass(SqlQuery.class);
-    conf.addAnnotatedClass(UnitTesting.class);
+    conf.addAnnotatedClass(TestingFunction.class);
     conf.addAnnotatedClass(Usecase.class);
-    conf.addAnnotatedClass(DesignImage.class);
     ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(conf.getProperties()).build();
     FACTORY = conf.buildSessionFactory(registry);
 }

@@ -6,40 +6,40 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
-import quynh.java.webapp.pm.dao.ClassSpecificationDao;
-import quynh.java.webapp.pm.model.ClassSpecification;
+import quynh.java.webapp.pm.dao.ClassSpecDao;
+import quynh.java.webapp.pm.model.ClassSpec;
 import quynh.java.webapp.pm.util.db.HibernateConnection;
 import quynh.java.webapp.pm.model.ClassPackage;
 
-public class ClassSpecificationDaoImpl implements ClassSpecificationDao {
+public class ClassSpecDaoImpl implements ClassSpecDao {
 private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
     
-    public List<ClassSpecification> getAll(ClassPackage classPackage) {
+    public List<ClassSpec> getAll(ClassPackage classPackage) {
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
-        Query<ClassSpecification> query = session.createQuery("FROM ClassSpecification WHERE classPackage=:classPackage");
+        Query<ClassSpec> query = session.createQuery("FROM ClassSpec WHERE classPackage=:classPackage");
         query.setParameter("classPackage", classPackage);
-        List<ClassSpecification> classSpecifications = query.list();
+        List<ClassSpec> classSpecifications = query.list();
         session.getTransaction().commit();
         session.close();
         return classSpecifications;
     }
-    public ClassSpecification get1(String name, ClassPackage classPackage) {
+    public ClassSpec get1(String name, ClassPackage classPackage) {
         Session session = sessionFactory.openSession();
-        Query<ClassSpecification> query = session.createQuery("FROM ClassSpecification WHERE name=:name and classPackage=:classPackage");
+        Query<ClassSpec> query = session.createQuery("FROM ClassSpec WHERE name=:name and classPackage=:classPackage");
         query.setParameter("name", name);
         query.setParameter("classPackage", classPackage);
-        ClassSpecification p = query.getSingleResultOrNull();
+        ClassSpec p = query.getSingleResultOrNull();
         session.close();
         return p;
     }
-    public ClassSpecification get1(int id) {
+    public ClassSpec getById(int id) {
         Session session = sessionFactory.openSession();
-        ClassSpecification p = session.get(ClassSpecification.class, id);
+        ClassSpec p = session.get(ClassSpec.class, id);
         session.close();
         return p;
     }
-    public ClassSpecification add(ClassSpecification classSpecification) {
+    public ClassSpec add(ClassSpec classSpecification) {
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
         session.save(classSpecification);
@@ -47,7 +47,7 @@ private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
         session.close();
         return classSpecification;
     }
-    public ClassSpecification update(ClassSpecification classSpecification) {
+    public ClassSpec update(ClassSpec classSpecification) {
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
         session.update(classSpecification);
@@ -55,7 +55,7 @@ private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
         session.close();
         return classSpecification;
     }
-    public ClassSpecification delete(ClassSpecification classSpecification) {
+    public ClassSpec delete(ClassSpec classSpecification) {
         Session session = sessionFactory.openSession();
         session.getTransaction().begin();
         session.delete(classSpecification);

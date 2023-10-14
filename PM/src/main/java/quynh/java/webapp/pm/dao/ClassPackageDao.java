@@ -8,7 +8,8 @@ import quynh.java.webapp.pm.model.Domain;
 public interface ClassPackageDao {
     
     List<ClassPackage> getAll(Domain domain);
-    ClassPackage get1(int id);
+    List<ClassPackage> getAllAndJustOnePackageHasClasses(Domain domain, int packageId);
+    ClassPackage getById(int id);
     ClassPackage get1(String name, Domain domain);
     ClassPackage add(ClassPackage classPackage);
     ClassPackage update(ClassPackage classPackage);
