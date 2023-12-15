@@ -210,13 +210,14 @@ public class DomainController extends HttpServlet {
 
 	private void processEditRequirement(HttpServletRequest request, HttpServletResponse response) {
 		int diagramId = RequestUtil.getParameterInt(request, "diagram-id");
-		if (diagramId != 0) {
-			PlanDiagram planDiagram = planDiagramService.getById(diagramId);
-			Domain domain = planDiagram.getDomain();
+		int domainId = RequestUtil.getParameterInt(request, "selected-domain-id");
+		if (domainId != 0) {
 			String requirement = request.getParameter("requirement");
-			domainService.updateRequirement(domain, requirement);
+			domainService.updateRequirement(domainId, requirement);
 			try {
-				response.sendRedirect("/PM/plan?id=" + diagramId);
+				response.sendRedirect("/PM/plan?"
+										+ "id=" + diagramId
+										+ "&domain-id=" + domainId);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

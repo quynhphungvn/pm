@@ -35,6 +35,7 @@
 							<form method="post" action="/PM/domain/update-requirement"
 									class="ui form p-2">
 								<input type="hidden" name="diagram-id" value="${selectedDiagram.id}" >
+								<input type="hidden" name="selected-domain-id" value="${selectedDomain.id}">
 								<div class="field">
 									<div class="mb-2">
 										<label>Content</label>

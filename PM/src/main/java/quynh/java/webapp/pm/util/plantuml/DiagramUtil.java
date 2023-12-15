@@ -69,8 +69,9 @@ public class DiagramUtil {
 	}
 	public static String createDiagramImage(String rootPath, int projectId, int domainId, 
 											String diagramContent, DiagramType type) {
-		String diaPath = DiagramPath.createPlanDiagramURI(projectId, domainId);
-		String imageDiagramName = type.toString() + "-diagram.png";
+		System.out.print(rootPath);
+		String diaPath = DiagramPath.createDocumentDiagramURI(projectId, domainId);
+		String imageDiagramName = type.toString().toLowerCase() + "-diagram.png";
 		DiagramUtil.createImage(diagramContent, rootPath + diaPath, imageDiagramName);
 		return diaPath + imageDiagramName;
 	}

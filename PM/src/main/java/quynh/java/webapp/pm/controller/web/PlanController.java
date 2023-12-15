@@ -29,7 +29,6 @@ import quynh.java.webapp.pm.util.plantuml.DiagramUtil;
  */
 public class PlanController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private ProjectService projectService = new ProjectServiceImpl();
     private DomainService domainService = new DomainServiceImpl();
     private PlanDiagramService planDiagramService = new PlanDiagramServiceImpl();
     /**
@@ -142,13 +141,16 @@ public class PlanController extends HttpServlet {
 		if (domainId != 0) {
 			String planDiagramName = request.getParameter("name");
 			String planDiagramType = request.getParameter("type");
-			PlanDiagram p = planDiagramService.add(planDiagramName, planDiagramType, domainId);
-			String selectedPlanDiagramId = request.getParameter("selected-diagram-id");
-			try {
-				response.sendRedirect("/PM/plan?id=" + selectedPlanDiagramId + "&domain-id=" + domainId);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if (planDiagramName != null && planDiagramName.isBlank() == false 
+					&& planDiagramType != null && planDiagramType.isBlank() == false) {
+				PlanDiagram p = planDiagramService.add(planDiagramName, planDiagramType, domainId);
+				String selectedPlanDiagramId = request.getParameter("selected-diagram-id");
+				try {
+					response.sendRedirect("/PM/plan?id=" + selectedPlanDiagramId + "&domain-id=" + domainId);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 		

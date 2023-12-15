@@ -8,5 +8,6 @@ public enum DiagramType {
 	USECASE,
 	WIREFRAME,
 	WBS,
-	GANTT;	
+	GANTT,
+	MINDMAP;	
 }

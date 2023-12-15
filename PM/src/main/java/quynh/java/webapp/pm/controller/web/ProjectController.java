@@ -21,7 +21,7 @@ import quynh.java.webapp.pm.util.StringChecker;
 /**
  * Servlet implementation class ProjectController
  */
-@WebServlet({"/project", "/project/*"})
+//@WebServlet({"/project", "/project/*"})
 public class ProjectController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ProjectService projectService = new ProjectServiceImpl(); 

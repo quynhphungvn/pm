@@ -146,13 +146,11 @@ public class ScreenController extends HttpServlet {
 		int domainId = RequestUtil.getParameterInt(request, "domain-id");
 		String usecaseDiagram = request.getParameter("usecase-diagram");
 		//create diagram image
-			String diaPath = DiagramPath.createPlanDiagramURI(projectId, domainId);
 			String realRootPath = (String) request.getServletContext().getAttribute("rootPath");
-			String imageDiagramName = "usecase-diagram.png";
-			DiagramUtil.createImage(usecaseDiagram, realRootPath + diaPath, imageDiagramName);
+			String publicImage = DiagramUtil.createDiagramImage(realRootPath, projectId, domainId, usecaseDiagram, DiagramType.USECASE);
 			response.setContentType("text/plain");
 			try {
-				response.getWriter().print("/PM/" + diaPath + imageDiagramName);
+				response.getWriter().print(publicImage);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

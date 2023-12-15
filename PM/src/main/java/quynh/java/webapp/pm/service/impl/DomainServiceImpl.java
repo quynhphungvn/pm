@@ -67,9 +67,13 @@ public class DomainServiceImpl implements DomainService {
 	}
 
 	@Override
-	public Domain updateRequirement(Domain domain, String requirement) {
-		domain.setRequirement(requirement);
-		return domainDao.update(domain);
+	public Domain updateRequirement(int domainId, String requirement) {
+		Domain domain = domainDao.getById(domainId);
+		if (domain != null) {
+			domain.setRequirement(requirement);
+			domainDao.update(domain);
+		}
+		return domain;
 	}
 
 	@Override

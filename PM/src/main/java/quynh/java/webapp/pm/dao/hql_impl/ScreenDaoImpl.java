@@ -12,7 +12,7 @@ import quynh.java.webapp.pm.dao.ScreenDao;
 import quynh.java.webapp.pm.model.Domain;
 
 public class ScreenDaoImpl implements ScreenDao {
-private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
+	private SessionFactory sessionFactory = HibernateConnection.getSessionFactory();
     
     public List<Screen> getAll(Domain domain) {
         Session session = sessionFactory.openSession();

@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Diagram</title>
+  <title>Usecase Specification</title>
   <link rel="stylesheet" href="/PM/libs/semantic-ui/semantic.min.css">
   <link rel="stylesheet" href="/PM/libs/bootstrap/css/bootstrap-utilities.min.css">
   <link rel="stylesheet" href="/PM/libs/css-custom/styles.css">
@@ -154,7 +154,7 @@
 									</div>
 									<div class="field">
 										<label>Normal flow</label>
-										<textarea rows="4" name="normal-flow">${selectedUsecase.normalFlow }</textarea>
+										<textarea rows="10" name="normal-flow">${selectedUsecase.normalFlow }</textarea>
 									</div>
 									<div class="field">
 										<label>Alternative flow</label>
@@ -240,7 +240,7 @@
 										<td>
 											<div class="ui form">
 												<div class="ui field">
-													<textarea rows="5" readonly>${selectedUsecase.normalFlow}</textarea>
+													<textarea rows="10" readonly>${selectedUsecase.normalFlow}</textarea>
 												</div>
 											</div>
 										</td>

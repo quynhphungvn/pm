@@ -359,8 +359,10 @@ public class ClassSpecController extends HttpServlet {
 				String selectedTestId = request.getParameter("selected-testing-funtion-id");
 				String selectedClassId = request.getParameter("selected-class-id");
 				try {
-					response.sendRedirect("/PM/class-spec?test-id=" + selectedTestId 
-									+ "&id=" + selectedClassId + "&package-id=" + packageId);
+					response.sendRedirect("/PM/class-spec?"
+											+ "test-id=" + selectedTestId
+											+ "&id=" + selectedClassId
+											+ "&package-id=" + packageId);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

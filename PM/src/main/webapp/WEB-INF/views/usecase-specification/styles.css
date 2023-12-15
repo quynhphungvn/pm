@@ -59,3 +59,6 @@ aside.left-bar > main {
   max-height: calc(100vh - 100px);
   min-height: 300px;
 }
+table.table tr :not(td:first-child, th) {
+	color: #3465a4;
+}

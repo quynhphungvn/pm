@@ -214,7 +214,7 @@ public class UsecaseSpecificationController extends HttpServlet {
 		if (usecaseId > 0) {
 			String createdBy = request.getParameter("created-by");
 			String actors = request.getParameter("actors");
-			String trigger = request.getParameter("trigger");
+			String trigger = request.getParameter("trigger-context");
 			String description = request.getParameter("description");
 			String preconditions = request.getParameter("preconditions");
 			String postconditions = request.getParameter("postconditions");

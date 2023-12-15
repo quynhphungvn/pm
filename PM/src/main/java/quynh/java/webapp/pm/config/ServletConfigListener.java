@@ -15,7 +15,6 @@ public class ServletConfigListener implements ServletContextListener {
     	ServletContext ctx = servletContextEvent.getServletContext();
     	String path = ctx.getRealPath("").replace("\\", "/");
     	ctx.setAttribute("rootPath", path);
-    	System.out.println(path);
     }
 	public void contextDestroyed(ServletContextEvent servletContextEvent) {
 		//do cleanup if needed

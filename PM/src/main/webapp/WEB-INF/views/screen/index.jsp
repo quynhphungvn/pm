@@ -153,7 +153,8 @@
 	                  </div>
 	                  <div class="actions">
 	                    <div class="d-flex justify-content-end">
-	                      <button type="button" class="ui icon button" onclick="testUsecaseDiagram()">
+	                      <button type="button" class="ui icon button" 
+	                      			onclick="testUsecaseDiagram(${selectedScreen.id}, ${selectedDomain.id}, ${selectedProject.id})">
 	                      	<i class="sync icon"></i>
 	                      </button>
 	                    </div>

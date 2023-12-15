@@ -4,6 +4,12 @@
  
 <web-app>
   <servlet>
+  	<servlet-name>ProjectController</servlet-name>
+  	<display-name>ProjectController</display-name>
+  	<description></description>
+  	<servlet-class>quynh.java.webapp.pm.controller.web.ProjectController</servlet-class>
+  </servlet>
+  <servlet>
   	<servlet-name>DomainController</servlet-name>
   	<display-name>DomainController</display-name>
   	<description></description>
@@ -39,6 +45,14 @@
   	<description></description>
   	<servlet-class>quynh.java.webapp.pm.controller.web.ClassSpecController</servlet-class>
   </servlet>
+  <servlet-mapping>
+  	<servlet-name>ProjectController</servlet-name>
+  	<url-pattern>/project</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ProjectController</servlet-name>
+  	<url-pattern>/project/*</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>DomainController</servlet-name>
   	<url-pattern>/domain</url-pattern>

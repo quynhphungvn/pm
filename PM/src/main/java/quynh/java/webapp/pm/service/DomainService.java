@@ -16,7 +16,7 @@ public interface DomainService {
 
 	public Domain deleteDomain(int domainId);
 
-	public Domain updateRequirement(Domain domain, String requirement);
+	public Domain updateRequirement(int domainId, String requirement);
 
 	public Domain updateErd(int domainId, String erdDiagram);
 

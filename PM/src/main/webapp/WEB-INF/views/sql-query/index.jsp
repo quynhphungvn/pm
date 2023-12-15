@@ -112,7 +112,7 @@
               </div>   
               <div class="d-flex justify-content-end">
                 <button class="ui button d-none js-update-content" type="submit">Update</button>
-                <button type="button" class="ui icon button" onclick="enableEditMode()">
+                <button type="button" class="ui icon button ${selectedQuery == null ? 'disabled' : ''}" onclick="enableEditMode()">
                 		<i class="edit icon"></i>
                 </button>    
               </div>         

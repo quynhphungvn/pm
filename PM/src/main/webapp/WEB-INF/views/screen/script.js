@@ -45,15 +45,14 @@ function deleteScreen(id, name, domainId) {
 			});
 	}
 }
-function testUsecaseDiagram(id, domainId, projectId) {
+function testUsecaseDiagram(domainId, projectId) {
 	let diagramText = document.querySelector("textarea[name='usecase-diagram']").value;
 	let options = {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/x-www-form-urlencoded"
 			},
-			body: "screen-id=" + id
-				+ "&project-id=" + projectId
+			body:"project-id=" + projectId
 				+ "&domain-id=" + domainId
 				+ "&usecase-diagram=" + encodeURIComponent(diagramText)	
 		}
@@ -63,7 +62,7 @@ function testUsecaseDiagram(id, domainId, projectId) {
 			})
 			.then((data) => {
 				let imgEl = document.querySelector("img.diagram-image");
-				imgEl.setAttribute("src", data + "?t=" + Date.now());
+				imgEl.setAttribute("src","/PM" + data + "?t=" + Date.now());
 			});
 }
 
